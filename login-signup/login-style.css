@@ -1,0 +1,116 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fontes/Roboto-Regular.ttf);
+}
+
+:root {
+    --primecolor: #F8B134;
+}
+
+.body {
+    background: var(--primecolor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+    margin: 0;
+}
+
+* {
+    font-family: Roboto;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 540px;
+    background: #F5F5F5;
+    border-radius: 17px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.entrar {
+    margin-top: 20px;
+    text-align: center;
+    font-style: bold;
+}
+
+.entrar h2 {
+    font-size: 30pt;
+    color: black;
+}
+
+.logo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.nome {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form-group {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#exampleInputEmail1 {
+    border: 0;
+    border-radius: 0;
+    background: whitesmoke;
+    border-bottom: 2px solid black;
+    margin-bottom: 5%;
+}
+
+#exampleInputPassword1 {
+    border: 0;
+    border-radius: 0;
+    background: whitesmoke;
+    border-bottom: 2px solid black;
+}
+
+form p{
+    margin-top: 7%;
+    margin-right: 8%;
+    display: flex;
+    justify-content: right;
+    color: blue;
+}
+
+#btn-entrar {
+    font-size: 13pt;
+    border-radius: 155px;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0F0F0F;
+}
+
+.btn-entrar {
+    margin-top: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-cadastro {
+    border: 0;
+    background-color: whitesmoke;
+}
+
+.btn-cadastro {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
