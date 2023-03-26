@@ -69,6 +69,12 @@
     background: whitesmoke;
     border-bottom: 2px solid black;
     margin-bottom: 5%;
+    outline: none !important;
+}
+
+#exampleInputEmail1:focus,  #exampleInputEmail1:active {
+    outline: none !important;
+    box-shadow: none;
 }
 
 #exampleInputPassword1 {
@@ -76,6 +82,12 @@
     border-radius: 0;
     background: whitesmoke;
     border-bottom: 2px solid black;
+    outline: none !important;
+}
+
+#exampleInputPassword1:focus,  #exampleInputPassword1:active {
+    outline: none !important;
+    box-shadow: none;
 }
 
 form p{
