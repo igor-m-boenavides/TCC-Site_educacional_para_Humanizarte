@@ -1,0 +1,234 @@
+/* GERAL */
+
+@font-face {
+    font-family: Roboto;
+    src: url(fontes/Roboto-Regular.ttf);
+}
+
+.body {
+  background: #F8B134;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0; 
+  margin: 0;
+  font-family: Roboto;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.navbar {
+  margin: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 60px;
+  border-radius: 100px;
+}
+
+#navbar #logo_texto {
+  margin-left: 2%;
+  margin-right: 57%;
+}
+
+#navbar #logo_texto img {
+  margin-right: 10%;
+}
+
+#navbar .nav-link {
+  color: black;
+  font-weight: 600;
+}
+
+#inicio {
+  text-decoration: underline;
+}
+
+/* RODA PÉ */
+
+.roda-pe {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  text-align: center;
+  }
+  
+  .roda-pe h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  }
+  
+  .roda-pe #logo-roda-pe {
+  width: 50px;
+  height: 50px;
+  margin-top: 1%;
+  margin-right: -13%;
+  }
+  
+  .roda-pe #copyright {
+  color: lightgray;
+  font-weight: 500;
+  margin-top: 0;
+  }
+  
+  .roda-pe .contato {
+  float: right;
+  margin: 1%;
+  margin-right: 5%;
+  color: lightgray;
+  font-size: 20pt;
+  }
+  
+  .roda-pe .contato #ig-icon #fb-icon #yt-icon {
+  padding: 10px;
+  }
+  
+  /* FIM RODA PÉ */
+
+/* CARTÕES DE PREÇO */
+
+.area-cartoes {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#h1-cursos {
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.cursos-titulo {
+  background-color: whitesmoke;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+/* :CRONOS */
+
+.cartao-cronos {
+  background: whitesmoke;
+  margin: 3%;
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.cartao-cronos h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: -15%;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#h1-cronos {
+  font-size: 15pt;
+  margin-right: -2px;
+  margin-top: -5px;
+}
+
+h1 sup {
+  font-size: 9pt;
+  top: -30px;
+}
+
+h1 p {
+  font-size: 9pt;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
+/* :SUN TZU */
+
+.cartao-suntzu {
+  background: whitesmoke;
+  margin: 3%;
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.cartao-suntzu h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: -15%;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#h1-suntzu {
+  font-size: 15pt;
+  margin-right: -2px;
+  margin-top: -5px;
+}
+
+h1 sup {
+  font-size: 9pt;
+  top: -30px;
+}
+
+h1 p {
+  font-size: 9pt;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
+/* :LOGOS */
+
+.cartao-logos {
+  background: whitesmoke;
+  margin: 3%;
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.cartao-logos h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: -15%;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#h1-logos {
+  font-size: 15pt;
+  margin-right: -2px;
+  margin-top: -5px;
+}
+
+h1 sup {
+  font-size: 9pt;
+  top: -30px;
+}
+
+h1 p {
+  font-size: 9pt;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
+/* :BOTÕES "COMPRAR" */
+
+#comprar-btn {
+  background: #E90303;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}

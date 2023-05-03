@@ -48,42 +48,43 @@
 /* RODA PÉ */
 
 .roda-pe {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: whitesmoke;
   text-align: center;
-}
-
-.roda-pe h1 {
+  }
+  
+  .roda-pe h1 {
   font-size: 20px;
   font-weight: 600;
   margin-top: 1%;
   margin-bottom: 1%;
-}
-
-.roda-pe #logo-roda-pe {
+  }
+  
+  .roda-pe #logo-roda-pe {
   width: 50px;
   height: 50px;
   margin-top: 1%;
   margin-right: -13%;
-}
-
-.roda-pe #copyright {
+  }
+  
+  .roda-pe #copyright {
   color: lightgray;
   font-weight: 500;
   margin-top: 0;
-}
-
-.roda-pe .contato {
+  }
+  
+  .roda-pe .contato {
   float: right;
   margin: 1%;
   margin-right: 5%;
   color: lightgray;
   font-size: 20pt;
-}
-
-.roda-pe .contato #ig-icon #fb-icon #yt-icon {
+  }
+  
+  .roda-pe .contato #ig-icon #fb-icon #yt-icon {
   padding: 10px;
-}
+  }
+  
+  /* FIM RODA PÉ */
