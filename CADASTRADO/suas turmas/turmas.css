@@ -116,6 +116,11 @@ padding: 10px;
   position: relative;
 }
 
+.logos #logos-icone {
+  font-size: 60pt;
+  color: #E34234;
+}
+
 .logos-entrar {
   position: absolute;
   bottom: 0;
@@ -152,6 +157,11 @@ padding: 10px;
   position: relative;
 }
 
+.cronos #cronos-icone {
+  font-size: 60pt;
+  color: #0FA3B1;
+}
+
 .cronos-entrar {
   position: absolute;
   bottom: 0;
@@ -186,6 +196,11 @@ padding: 10px;
   justify-content: center;
   text-align: center;
   position: relative;
+}
+
+.suntzu #suntzu-icone {
+  font-size: 60pt;
+  color: #7AC74F;
 }
 
 .suntzu-entrar {

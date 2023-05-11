@@ -65,8 +65,8 @@
   }
   
   .roda-pe #copyright {
-  color: lightgray;
-  font-weight: 500;
+  color: #F8B134;
+  font-weight: 600;
   margin-top: 0;
   }
   
@@ -74,7 +74,7 @@
   float: right;
   margin: 1%;
   margin-right: 5%;
-  color: lightgray;
+  color: #F8B134;
   font-size: 20pt;
   }
   
@@ -113,16 +113,25 @@ header .titulo {
     font-weight: bold;
 }
 
-#aula1 img {
-    float: right;
-    rotate: 180deg;
-    margin-right: 0.5%;
+.area-aulas {
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 1%;
+  padding-left: 2%;
+  background: #F8B134;
+  border-radius: 50px;
+  color: #14110F;
+  font-weight: bold;
+  box-shadow: #252220 2px 2px 2px;
+  text-shadow: rgba(68, 68, 68, 0.233) 2px 2px 2px;
 }
 
-#aula2 img {
-    float: right;
-    rotate: 180deg;
-    margin-right: 0.5%;
+#aula1 button, #aula2 button {
+  border: none;
+  background-color: transparent;
+  float: right;
 }
 
 /* FIM AULAS */

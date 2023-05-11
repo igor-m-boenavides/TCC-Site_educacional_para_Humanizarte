@@ -105,91 +105,18 @@
 }
 
 .cursos-titulo {
-  background-color: whitesmoke;
-  margin-left: 40%;
-  margin-right: 40%;
-}
-
-/* :CRONOS */
-
-.cartao-cronos {
+  width: 100%;
+  height: 40px;
   background: whitesmoke;
-  margin: 3%;
-  width: 15%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.cartao-cronos h1 {
-  font-size: 40pt;
-  text-align: center;
-  margin-top: -15%;
-  margin-right: 10px;
-  justify-items: center;
-  align-items: center;
-}
-
-#h1-cronos {
-  font-size: 15pt;
-  margin-right: -2px;
-  margin-top: -5px;
-}
-
-h1 sup {
-  font-size: 9pt;
-  top: -30px;
-}
-
-h1 p {
-  font-size: 9pt;
-  margin-left: 15px;
-  margin-top: -10px;
-}
-
-/* :SUN TZU */
-
-.cartao-suntzu {
-  background: whitesmoke;
-  margin: 3%;
-  width: 15%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.cartao-suntzu h1 {
-  font-size: 40pt;
-  text-align: center;
-  margin-top: -15%;
-  margin-right: 10px;
-  justify-items: center;
-  align-items: center;
-}
-
-#h1-suntzu {
-  font-size: 15pt;
-  margin-right: -2px;
-  margin-top: -5px;
-}
-
-h1 sup {
-  font-size: 9pt;
-  top: -30px;
-}
-
-h1 p {
-  font-size: 9pt;
-  margin-left: 15px;
-  margin-top: -10px;
+  position: absolute;
+  top: 20%;
 }
 
 /* :LOGOS */
 
 .cartao-logos {
-  background: whitesmoke;
+  background-image: url(imagens/logos-fundo.png);
+  background-position: 50% 25%;
   margin: 3%;
   width: 15%;
   text-align: center;
@@ -211,17 +138,104 @@ h1 p {
   font-size: 15pt;
   margin-right: -2px;
   margin-top: -5px;
+  font-weight: 600;
 }
 
 h1 sup {
   font-size: 9pt;
   top: -30px;
+  font-weight: 600;
 }
 
 h1 p {
   font-size: 9pt;
   margin-left: 15px;
   margin-top: -10px;
+  font-weight: 600;
+}
+
+/* :CRONOS */
+
+.cartao-cronos {
+  background-image: url(imagens/cronos-fundo.png);
+  background-position: 50% 25%;
+  margin: 3%;
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.cartao-cronos h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: -15%;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#h1-cronos {
+  font-size: 15pt;
+  margin-right: -2px;
+  margin-top: -5px;
+  font-weight: 600;
+}
+
+h1 sup {
+  font-size: 9pt;
+  top: -30px;
+  font-weight: 600;
+}
+
+h1 p {
+  font-size: 9pt;
+  margin-left: 15px;
+  margin-top: -10px;
+  font-weight: 600;
+}
+
+/* :SUN TZU */
+
+.cartao-suntzu {
+  background-image: url(imagens/suntzu-fundo.png);
+  background-position: 50% 25%;
+  margin: 3%;
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.cartao-suntzu h1 {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: -15%;
+  margin-right: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#h1-suntzu {
+  font-size: 15pt;
+  margin-right: -2px;
+  margin-top: -5px;
+  font-weight: 600;
+}
+
+h1 sup {
+  font-size: 9pt;
+  top: -30px;
+  font-weight: 600;
+}
+
+h1 p {
+  font-size: 9pt;
+  margin-left: 15px;
+  margin-top: -10px;
+  font-weight: 600;
 }
 
 /* :BOTÕES "COMPRAR" */
