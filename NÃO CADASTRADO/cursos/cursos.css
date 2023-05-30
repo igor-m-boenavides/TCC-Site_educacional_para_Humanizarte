@@ -9,7 +9,7 @@ body {
   background-color: #F8B134;
 }
 
-.body {
+#body {
   background: #F8B134;
   position: absolute;
   top: 0;
@@ -51,7 +51,7 @@ body {
 
 /* RODA PÉ */
 
-/* .roda-pe {
+.roda-pe {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -90,7 +90,7 @@ body {
   
 .roda-pe .contato #ig-icon #fb-icon #yt-icon {
   padding: 10px;
-} */
+}
   
 /* FIM RODA PÉ */
 
@@ -102,10 +102,13 @@ body {
   margin-left: 4%;
 }
 
+/* :LOGOS */
+
 .cursos .logos {
   background-color: #f8f8f8;
   margin-left: 7%;
   margin-right: 7%;
+  margin-bottom: 5%;
   display: flex;
 }
 
@@ -114,16 +117,22 @@ body {
 }
 
 .logos .imagem {
-  margin: 0;
-  padding: 0;
-  min-height: fit-content;
+  width: 400px;
+  background: url(imagens/1.jpg);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
 }
 
-.logos .imagem img {
-  display: flex;
-  width: 300px;
-  height: 100%;
-  margin: 0;
+.logos .imagem button {
+  background: #E90303;
+  border-radius: 2px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 600;
+  font-size: 15pt;
+  margin-top: 400px;
 }
 
 .logos .texto li {
@@ -131,5 +140,86 @@ body {
 }
 
 .logos .texto li:not(:last-child) {
+  padding-bottom: 1%;
+}
+
+/* :CRONOS */
+
+.cursos .cronos {
+  background-color: #f8f8f8;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin: 5%;
+  display: flex;
+}
+
+.cronos .texto {
+  line-height: 200%;
+}
+
+.cronos .imagem {
+  width: 400px;
+  background: url(imagens/1.jpg);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.cronos .imagem button {
+  background: #E90303;
+  border-radius: 2px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 600;
+  font-size: 15pt;
+  margin-top: 400px;
+}
+
+.cronos .texto li {
+  padding: 2%;
+}
+
+.cronos .texto li:not(:last-child) {
+  padding-bottom: 1%;
+}
+
+/* :SUNTZU */
+
+.cursos .suntzu {
+  background-color: #f8f8f8;
+  margin-left: 7%;
+  margin-right: 7%;
+  display: flex;
+}
+
+.suntzu .texto {
+  line-height: 200%;
+}
+
+.suntzu .imagem {
+  width: 400px;
+  background: url(imagens/1.jpg);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.suntzu .imagem button {
+  background: #E90303;
+  border-radius: 2px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 600;
+  font-size: 15pt;
+  margin-top: 400px;
+}
+
+.suntzu .texto li {
+  padding: 2%;
+}
+
+.suntzu .texto li:not(:last-child) {
   padding-bottom: 1%;
 }
