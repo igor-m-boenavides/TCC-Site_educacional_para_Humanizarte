@@ -63,7 +63,7 @@
     margin-right: 7%;
 }
 
-#exampleInputEmail1 {
+#nome, #email, #telefone, #senha {
     border: 0;
     border-radius: 0;
     background: whitesmoke;
