@@ -1,0 +1,107 @@
+/* GERAL */
+
+@font-face {
+    font-family: Roboto;
+    src: url(fontes/Roboto-Regular.ttf);
+  }
+  
+  .body {
+  background: #F8B134;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0; 
+  margin: 0;
+  font-family: Roboto;
+  }
+  
+  /* BARRA DE NAVEGAÇÃO */
+  
+  .navbar {
+  margin: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 60px;
+  border-radius: 100px;
+  }
+  
+  #navbar #logo_texto {
+  margin-left: 2%;
+  margin-right: 57%;
+  }
+  
+  #navbar #logo_texto img {
+  margin-right: 10%;
+  }
+  
+  #navbar .nav-link {
+  color: black;
+  font-weight: 600;
+  }
+  
+  #atual {
+  text-decoration: underline;
+  }
+  
+  /* INICIO CADASTRO */
+  
+  .area-alunos h1 {
+    font-size: 40pt;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    color: black;
+  }
+  
+  .botao-cadastro {
+    justify-content: center;
+    display: flex;
+    font-size: 20pt;
+  
+  }
+  
+  .botao-cadastro a {
+    color: black;
+    font-size: 25pt;
+  }
+  
+  /* FIM CADASTRO */
+  
+  /* INICIO ALUNOS */
+  
+  .lista-alunos {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    padding-left: 2%;
+    background: #F8B134;
+    border-radius: 50px;
+    color: #14110F;
+    font-weight: bold;
+  }
+  
+  .lista-alunos {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    padding-left: 2%;
+    background: whitesmoke;
+    border-radius: 50px;
+    color: #14110F;
+    font-weight: bold;
+  }
+  
+  #aula1 button, #aula2 button {
+    border: none;
+    background-color: transparent;
+    float: right;
+    rotate: 180deg;
+  }
+  
+  /* FIM ALUNOS */

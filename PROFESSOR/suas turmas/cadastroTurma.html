@@ -19,21 +19,15 @@
 
 </head>
 <body>
-    <form action="cadastroAluno.php" method="post">
+    <form action="cadastroTurma.php" method="post">
+        <label for="id">Id</label>
+        <input type="text" name="id"><br>
         <label for="nome">Nome</label>
         <input type="text" name="nome"><br>
-        <label for="email">Email</label>
-        <input type="email" name="email"><br>
-        <label for="senha">Senha</label>
-        <input type="password" name="senha"><br>
-        <label for="telefone">Telefone</label>
-        <input type="text" name="telefone"><br>
-          <input type="radio" id="logos" name="logos" value="logos">
-          <label for="logos">Logos</label><br>
-          <input type="radio" id="cronos" name="cronos" value="cronos">
-          <label for="cronos">Cronos</label><br>
-          <input type="radio" id="suntzu" name="suntzu" value="suntzu">
-          <label for="suntzu">Sun Tzu</label>
+        <label for="desc">Descrição</label>
+        <input type="text" name="desc"><br>
+        <label for="quantiddade">Quantidade</label>
+        <input type="number" name="quantidade"><br>
         <input type="submit" value="Cadastrar">
     </form>
 </body>
