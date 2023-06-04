@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Humanizarte</title>
+    <link rel="stylesheet" href="cadastroAluno.css">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -16,25 +17,44 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/99d4636c93.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
 </head>
 <body>
-    <form action="cadastroAluno.php" method="post">
-        <label for="nome">Nome</label>
-        <input type="text" name="nome"><br>
-        <label for="email">Email</label>
-        <input type="email" name="email"><br>
-        <label for="senha">Senha</label>
-        <input type="password" name="senha"><br>
-        <label for="telefone">Telefone</label>
-        <input type="text" name="telefone"><br>
-          <input type="radio" id="logos" name="logos" value="logos">
-          <label for="logos">Logos</label><br>
-          <input type="radio" id="cronos" name="cronos" value="cronos">
-          <label for="cronos">Cronos</label><br>
-          <input type="radio" id="suntzu" name="suntzu" value="suntzu">
-          <label for="suntzu">Sun Tzu</label>
-        <input type="submit" value="Cadastrar">
+<div class="body">
+
+
+<div class="login">
+    <div class="entrar">
+        <h2><b>Cadastro</b></h2>
+    </div>
+    <div class="logo">
+        <img src="imagens/logo.png" alt="Logo da Humanizarte" width="20%" height="20%">
+    </div>
+    <form action="cadastroAluno.php" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome de usuário</label>
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="&#xf007; Digite o nome do usuário" style="font-family:Arial, FontAwesome">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="&#xf0e0; Digite o email do usuário" style="font-family:Arial, FontAwesome">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="&#xf095; Digite o telefone do usuário" style="font-family:Arial, FontAwesome">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="&#xf023; Digite a senha do usuário" style="font-family:Arial, FontAwesome" name="">
+        </div>
+        <div class="form-check">
+        <div class="btn-cadastro">
+            <input type="submit" value="CADASTRO" class="btn btn-dark" id="btn-cadastro"></input>
+        </div>
+        </div>
     </form>
+</div>
+
+
+</div>
 </body>
 </html>

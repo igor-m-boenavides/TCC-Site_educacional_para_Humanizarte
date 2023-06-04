@@ -3,12 +3,8 @@
     src: url(fontes/Roboto-Regular.ttf);
 }
 
-:root {
-    --primecolor: #F8B134;
-}
-
 .body {
-    background: var(--primecolor);
+    background: #F8B134;
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +24,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 390px;
-    height: 540px;
+    height: 610px;
     background: #F5F5F5;
     border-radius: 17px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -72,20 +68,7 @@
     outline: none !important;
 }
 
-#exampleInputEmail1:focus,  #exampleInputEmail1:active {
-    outline: none !important;
-    box-shadow: none;
-}
-
-#exampleInputPassword1 {
-    border: 0;
-    border-radius: 0;
-    background: whitesmoke;
-    border-bottom: 2px solid black;
-    outline: none !important;
-}
-
-#exampleInputPassword1:focus,  #exampleInputPassword1:active {
+#nome:focus,  #nome:active, #email:focus, #email:active, #telefone:focus, #telefone:active, #senha:focus, #senha:active {
     outline: none !important;
     box-shadow: none;
 }
@@ -98,7 +81,7 @@ form p{
     color: blue;
 }
 
-#btn-entrar {
+#btn-cadastro {
     font-size: 13pt;
     border-radius: 155px;
     padding-left: 25%;
@@ -109,25 +92,25 @@ form p{
     background: #0F0F0F;
 }
 
-.btn-entrar {
-    margin-top: 13%;
+.btn-cadastro {
+    margin-top: 11%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#btn-cadastro {
+#btn-entrar {
     border: 0;
     background-color: whitesmoke;
 }
 
-.btn-cadastro {
-    margin-top: 5%;
+.btn-entrar {
+    margin-top: 3%;
     display: flex;
     justify-content: center;
 }
 
-.btn-cadastro a {
+.btn-entrar a {
     color: black;
     text-decoration: none;
 }
