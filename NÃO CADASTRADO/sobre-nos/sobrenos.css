@@ -86,5 +86,14 @@
   .roda-pe .contato #ig-icon #fb-icon #yt-icon {
   padding: 10px;
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #F8B134;
+    text-align: center;
+  }
   
   /* FIM RODA PÉ */
