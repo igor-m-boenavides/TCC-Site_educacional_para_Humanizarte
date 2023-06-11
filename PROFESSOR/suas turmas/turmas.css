@@ -105,3 +105,144 @@
   }
   
   /* FIM ALUNOS */
+
+  /* CURSOS */
+
+.area-turmas {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.titulo {
+  margin-left: 7%;
+  font-weight: bold;
+  font-size: 40pt;
+  margin-top: 3%;
+  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+  color: black;
+}
+
+.logos {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 5%;
+  width: 170px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.logos #logos-icone {
+  font-size: 60pt;
+  color: #E34234;
+}
+
+.logos-entrar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #14110F;
+  color: whitesmoke;
+  padding: 4%;
+  border-radius: 0 0 10px 10px;
+}
+
+.logos-entrar a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logos h1 {
+  font-size: 22pt;
+  font-weight: 600;
+  margin-top: -10%;
+  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+  color: black;
+}
+
+.cronos {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 5%;
+  width: 170px;
+  height: 200px;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.cronos #cronos-icone {
+  font-size: 60pt;
+  color: #0FA3B1;
+}
+
+.cronos-entrar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #14110F;
+  color: whitesmoke;
+  padding: 4%;
+  border-radius: 0 0 10px 10px;
+}
+
+.cronos-entrar a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cronos h1 {
+  font-size: 22pt;
+  font-weight: 600;
+  margin-top: -10%;
+  color: black;
+  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+}
+
+.suntzu {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 5%;
+  width: 170px;
+  height: 200px;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.suntzu #suntzu-icone {
+  font-size: 60pt;
+  color: #7AC74F;
+}
+
+.suntzu-entrar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #14110F;
+  color: whitesmoke;
+  padding: 4%;
+  border-radius: 0 0 10px 10px;
+}
+
+.suntzu-entrar a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.suntzu h1 {
+  font-size: 22pt;
+  font-weight: 600;
+  margin-top: -10%;
+  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+  color: black;
+}

@@ -29,7 +29,7 @@
 
 #navbar #logo_texto {
   margin-left: 2%;
-  margin-right: 57%;
+  margin-right: 63%;
 }
 
 #navbar #logo_texto img {
@@ -97,3 +97,56 @@
   }
   
   /* FIM RODA PÉ */
+
+  /* SOBRE NÓS */
+
+.area {
+  margin-top: 5%;
+  left: 50%;
+  display: flex;
+  margin-left: 25%;
+}
+  
+.area-sobre-nos {
+  display: flex;
+}
+  
+.area .area-sobre-nos .texto {
+  width: 60%;
+  margin-right: 1%;
+}
+
+.area .area-sobre-nos .texto h1 {
+  font-weight: bolder;
+}
+  
+.area .area-sobre-nos .imagem {
+  width: 120%;
+}
+
+/* :Sobre nós */
+
+.sobre_nos {
+  margin-top: 3%;
+  border: 2px solid black;
+  display: flex;
+  background: whitesmoke;
+  margin-bottom: 2%;
+}
+
+.sobre_nos .titulo {
+  width: 80%;
+  height: 100px;
+  transform: rotate(-90deg);
+  background-color: #0F0F0F;
+  color: whitesmoke;
+  font-size: 25pt;
+  display: flex;
+  align-items: center;
+}
+
+.sobre_nos .texto {
+  margin: 1%;
+}
+
+  /* FIM SOBRE NÓS */

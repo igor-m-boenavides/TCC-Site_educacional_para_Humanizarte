@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
-    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="login.css">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -29,22 +29,19 @@
     <div class="logo">
         <img src="imagens/logo.png" alt="Logo da Humanizarte" width="25%" height="25%">
     </div>
-    <form>
+    <form action="login.php" method="POST">
         <div class="form-group" id="user-box">
             <label for="exampleInputEmail1">Nome de usuário</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="&#xf007; Digite seu nome de usuário" style="font-family:Arial, FontAwesome">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nome" aria-describedby="emailHelp" placeholder="&#xf007; Digite seu nome de usuário" style="font-family:Arial, FontAwesome" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="&#xf023; Digite sua senha" style="font-family:Arial, FontAwesome">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="&#xf023; Digite sua senha" style="font-family:Arial, FontAwesome" required>
         </div>
         <div class="form-check">
         <p><a href="#"><b>Esqueceu a sua senha?</b></a></p>
         <div class="btn-entrar">
-            <button type="button" class="btn btn-dark" id="btn-entrar">ENTRAR</button>
-        </div>
-        <div class="btn-cadastro">
-            <button id="btn-cadastro"><b><a href="signup.html">CADASTRO</a></b></button>
+            <input type="submit" id="btn-entrar" value="ENTRAR"></input>
         </div>
     </form>
 </div>
