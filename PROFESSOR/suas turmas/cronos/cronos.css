@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Roboto;
-    src: url(fontes/Roboto-Regular.ttf);
+    src: url(../fontes/Roboto-Regular.ttf);
   }
   
 .body {
@@ -97,6 +97,25 @@ header .titulo {
 }
 
 /* FIM CABEÇALHO */
+
+/* INICIO CADASTRO */
+
+.botao-cadastro {
+  margin-top: 3%;
+  justify-content: center;
+  display: flex;
+  font-size: 20pt;
+
+}
+
+.botao-cadastro a {
+  color: black;
+  font-size: 25pt;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FIM CADASTRO */
 
 /* AULAS */
 

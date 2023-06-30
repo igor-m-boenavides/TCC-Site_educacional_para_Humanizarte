@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
-    <link rel="stylesheet" href=alunos.css>
+    <link rel="stylesheet" href="alunos.css">
     
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -63,34 +63,63 @@
 <!-- INICIO CADASTRO -->
 
 <div class="botao-cadastro">
-    <p><a href="cadastroAluno.html"><i class="bi bi-plus-circle-fill" id="add-aluno"></i></a></p>
+    <p><a href="cadastroAluno.html"><i class="bi bi-plus-circle-fill" id="add-aluno"></i> Cadastrar aluno</a></p>
 </div>
 
 <!-- FIM CADASTRO -->
 
 <!-- INICIO LISTAGEM DE ALUNOS -->
 
-<div class="lista-alunos">
-  <div id="aula1">
-    <div id="aula2"> <i class="bi bi-book-half"></i> Todos alunos <button type="button"><img src="imagens/seta.png" width="25px" height="25px"></button></div>
-  </div>
-</div>
+<?php
 
-<div class="lista-alunos">
-  <div id="aula2">
-    <div id="aula2"> <i class="bi bi-book-half"></i> Alunos LOGOS <button type="button"><img src="imagens/seta.png" width="25px" height="25px"></button></div>
-  </div>
-</div>
+$servername = 'localhost';
+$dbname = 'humanizarte';
+$username = 'root';
+$password = '';
 
-<div class="lista-alunos">
-  <div id="aula1">
-    <div id="aula2"> <i class="bi bi-book-half"></i> Alunos CRONOS <button type="button"><img src="imagens/seta.png" width="25px" height="25px"></button></div>
-  </div>
-</div>
+$dsn = "mysql:host=$servername;dbname=$dbname"; 
 
-<div class="lista-alunos">
-  <div id="aula2"> <i class="bi bi-book-half"></i> Alunos SUNTZU <button type="button"><img src="imagens/seta.png" width="25px" height="25px"></button></div>
-</div>
+$sql = "SELECT * FROM aluno";
+
+try {
+  $pdo = new PDO($dsn, $username, $password);
+  $stmt = $pdo->query($sql);
+
+  if ($stmt === false) {
+      die("Error");
+  }
+} catch (PDOException $e) {
+  echo $e->getMessage();
+}
+
+?>
+
+<table class="table">
+<!-- Your existing code -->
+<tbody>
+  <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+  <tr>
+    <td><?php echo htmlspecialchars($row['id']); ?></td>
+    <td><?php echo htmlspecialchars($row['nome']); ?></td>
+    <td><?php echo htmlspecialchars($row['email']); ?></td>
+    <td><?php echo htmlspecialchars($row['senha']); ?></td>
+    <td><?php 
+    
+    $senha = htmlspecialchars($row['senha']);
+    if ($senha == 1) {
+        echo "Logos";
+    } else if ($senha == 2) {
+        echo "Cronos";
+    } else {
+        echo "Suntzu";
+    };
+    
+    ?></td>
+    <td><a href="./update.php?user_id=<?php echo htmlspecialchars($row['id']); ?>"><i class="bi bi-pen"></i></a></td>
+  </tr>
+  <?php endwhile; ?>
+</tbody>
+</table>
 
 <!-- FIM LISTAGEM DE ALUNOS -->
 

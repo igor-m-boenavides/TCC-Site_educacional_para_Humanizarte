@@ -21,7 +21,7 @@ if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && 
     };
 
 } else {
-    header("Location: login.php");
+    header("Location: login.html");
 }
 
 ?>

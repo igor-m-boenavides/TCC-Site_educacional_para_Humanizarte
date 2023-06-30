@@ -18,7 +18,7 @@ LISTA DE A FAZERES:
 
 09. Sistema de controle de sessão
 
-10. Sistema de alteração de dados do usuário
+---------10. Sistema de alteração de dados do usuário---------
 
 11. Estudar sistema de incorporamento de vídeos (Vimeo)
 

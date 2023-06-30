@@ -1,156 +1,92 @@
 /* GERAL */
 
 @font-face {
-    font-family: Roboto;
-    src: url(fontes/Roboto-Regular.ttf);
-  }
-  
-  .body {
-  background: #F8B134;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0; 
-  margin: 0;
   font-family: Roboto;
-  }
-  
-  /* BARRA DE NAVEGAÇÃO */
-  
-  .navbar {
-  margin: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  height: 60px;
-  border-radius: 100px;
-  }
-  
-  #navbar #logo_texto {
-  margin-left: 2%;
-  margin-right: 57%;
-  }
-  
-  #navbar #logo_texto img {
-  margin-right: 10%;
-  }
-  
-  #navbar .nav-link {
-  color: black;
-  font-weight: 600;
-  }
-  
-  #atual {
-  text-decoration: underline;
-  }
-  
+  src: url(fontes/Roboto-Regular.ttf);
+}
+
+.body {
+background: #F8B134;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+padding: 0; 
+margin: 0;
+font-family: Roboto;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.navbar {
+margin: 1%;
+margin-left: 2%;
+margin-right: 2%;
+height: 60px;
+border-radius: 100px;
+}
+
+#navbar #logo_texto {
+margin-left: 2%;
+margin-right: 57%;
+font-weight: bold;
+}
+
+#navbar #logo_texto img {
+margin-right: 10%;
+}
+
+#navbar .nav-link {
+color: black;
+font-weight: 600;
+}
+
 /* RODA PÉ */
 
 .roda-pe {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: whitesmoke;
-  text-align: center;
-  }
-  
-  .roda-pe h1 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  }
-  
-  .roda-pe #logo-roda-pe {
-  width: 50px;
-  height: 50px;
-  margin-top: 1%;
-  margin-right: -13%;
-  }
-  
-  .roda-pe #copyright {
-  color: lightgray;
-  font-weight: 500;
-  margin-top: 0;
-  }
-  
-  .roda-pe .contato {
-  float: right;
-  margin: 1%;
-  margin-right: 5%;
-  color: lightgray;
-  font-size: 20pt;
-  }
-  
-  .roda-pe .contato #ig-icon #fb-icon #yt-icon {
-  padding: 10px;
-  }
-  
-  /* FIM RODA PÉ */
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: whitesmoke;
+text-align: center;
+}
 
-  /* INICIO CADASTRO */
-  
-  .area-alunos h1 {
-    font-size: 40pt;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 5%;
-    color: black;
-  }
-  
-  .botao-cadastro {
-    justify-content: center;
-    display: flex;
-    font-size: 20pt;
-  
-  }
-  
-  .botao-cadastro a {
-    color: black;
-    font-size: 25pt;
-  }
-  
-  /* FIM CADASTRO */
-  
-  /* INICIO ALUNOS */
-  
-  .lista-alunos {
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 1%;
-    padding-left: 2%;
-    background: #F8B134;
-    border-radius: 50px;
-    color: #14110F;
-    font-weight: bold;
-  }
-  
-  .lista-alunos {
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 1%;
-    padding-left: 2%;
-    background: whitesmoke;
-    border-radius: 50px;
-    color: #14110F;
-    font-weight: bold;
-  }
-  
-  #aula1 button, #aula2 button {
-    border: none;
-    background-color: transparent;
-    float: right;
-    rotate: 180deg;
-  }
-  
-  /* FIM ALUNOS */
+.roda-pe h1 {
+font-size: 20px;
+font-weight: 600;
+margin-top: 1%;
+margin-bottom: 1%;
+}
 
-  /* CURSOS */
+.roda-pe #logo-roda-pe {
+width: 50px;
+height: 50px;
+margin-top: 1%;
+margin-right: -13%;
+}
+
+.roda-pe #copyright {
+color: lightgray;
+font-weight: 500;
+margin-top: 0;
+}
+
+.roda-pe .contato {
+float: right;
+margin: 1%;
+margin-right: 5%;
+color: lightgray;
+font-size: 20pt;
+}
+
+.roda-pe .contato #ig-icon #fb-icon #yt-icon {
+padding: 10px;
+}
+
+/* FIM RODA PÉ */
+
+/* CURSOS */
 
 .area-turmas {
   margin: 0;

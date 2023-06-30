@@ -65,43 +65,21 @@ text-decoration: underline;
 .botao-cadastro a {
   color: black;
   font-size: 25pt;
+  text-decoration: none;
 }
 
 /* FIM CADASTRO */
 
 /* INICIO ALUNOS */
 
-.lista-alunos {
-  margin-left: 6%;
-  margin-right: 6%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  padding: 1%;
-  padding-left: 2%;
-  background: #F8B134;
-  border-radius: 50px;
-  color: #14110F;
-  font-weight: bold;
+table tr, table th, table td {
+  border: 2px solid black;
+  text-align: center;
+  background-color: whitesmoke;
 }
 
-.lista-alunos {
-  margin-left: 6%;
-  margin-right: 6%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  padding: 1%;
-  padding-left: 2%;
-  background: whitesmoke;
-  border-radius: 50px;
-  color: #14110F;
-  font-weight: bold;
-}
-
-#aula1 button, #aula2 button {
-  border: none;
-  background-color: transparent;
-  float: right;
-  rotate: 180deg;
+table {
+  background-color: whitesmoke;
 }
 
 /* FIM ALUNOS */
