@@ -20,7 +20,6 @@
 
 </head>
 <body>
-<div class="body">
 
 <!-- BARRA DE NAVEGAÇÃO -->
 
@@ -127,6 +126,5 @@ try {
 
 </div>
 
-</div>
 </body>
 </html>
