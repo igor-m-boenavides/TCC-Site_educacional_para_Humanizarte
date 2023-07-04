@@ -1,49 +1,70 @@
 /* GERAL */
 
 @font-face {
-    font-family: Roboto;
-    src: url(fontes/Roboto-Regular.ttf);
+  font-family: Roboto;
+  src: url(fontes/Roboto-Regular.ttf);
 }
 
 .body {
-  background: #F8B134;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0; 
-  margin: 0;
-  font-family: Roboto;
+background: #F8B134 !important;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+padding: 0; 
+margin: 0;
+font-family: Roboto;
 }
 
 /* BARRA DE NAVEGAÇÃO */
 
 .navbar {
+  background-color: whitesmoke;
   margin: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  height: 60px;
-  border-radius: 100px;
+  border-radius: 100px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#navbar #logo_texto {
-  margin-left: 2%;
-  margin-right: 63%;
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 900px; /* Adjusted */
+  display: flex;
+  align-items: center;
 }
 
-#navbar #logo_texto img {
-  margin-right: 10%;
+.navbar-logo img {
+  margin-right: 5px;
 }
 
-#navbar .nav-link {
+.lista-menu .menu-items {
+  margin-top: 5%;
+  font-size: 11.5pt;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: auto; /* Added */
+}
+
+.lista-menu .menu-items li {
+  margin-right: 10px;
+}
+
+.lista-menu .menu-items li a {
   color: black;
-  font-weight: 600;
+  text-decoration: none;
 }
 
-#inicio {
-  text-decoration: underline;
+#atual {
+  text-decoration: underline !important;
 }
+
+/* FIM BARRA DE NAVEGAÇÃO */
+
 
 /* RODA PÉ */
 
@@ -86,6 +107,15 @@
   .roda-pe .contato #ig-icon #fb-icon #yt-icon {
   padding: 10px;
   }
+
+  footer {
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #F8B134;
+    text-align: center;
+  }
   
   /* FIM RODA PÉ */
 
@@ -99,150 +129,166 @@
 }
 
 #h1-cursos {
-  text-align: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
+text-align: center;
+margin-bottom: 5%;
+margin-top: 5%;
 }
 
 .cursos-titulo {
-  width: 100%;
-  height: 40px;
-  background: whitesmoke;
-  position: absolute;
-  top: 20%;
+width: 100%;
+height: 40px;
+background: whitesmoke;
+position: absolute;
+top: 20%;
 }
 
 /* :LOGOS */
 
 .cartao-logos {
-  background-image: url(imagens/logos-fundo.png);
-  background-position: 50% 25%;
-  margin: 3%;
-  width: 15%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
+background-image: url(imagens/logos-fundo.png);
+background-position: 50% 25%;
+margin: 3%;
+width: 15%;
+text-align: center;
+justify-content: center;
+align-items: center;
+padding-bottom: 15px;
 }
 
 .cartao-logos h1 {
-  font-size: 40pt;
-  text-align: center;
-  margin-top: -15%;
-  margin-right: 10px;
-  justify-items: center;
-  align-items: center;
+font-size: 40pt;
+text-align: center;
+margin-top: -15%;
+margin-right: 10px;
+justify-items: center;
+align-items: center;
 }
 
 #h1-logos {
-  font-size: 15pt;
-  margin-right: -2px;
-  margin-top: -5px;
-  font-weight: 600;
+font-size: 15pt;
+margin-right: -2px;
+margin-top: -5px;
+font-weight: 600;
 }
 
 h1 sup {
-  font-size: 9pt;
-  top: -30px;
-  font-weight: 600;
+font-size: 9pt;
+top: -30px;
+font-weight: 600;
 }
 
 h1 p {
-  font-size: 9pt;
-  margin-left: 15px;
-  margin-top: -10px;
-  font-weight: 600;
+font-size: 9pt;
+margin-left: 15px;
+margin-top: -10px;
+font-weight: 600;
 }
 
 /* :CRONOS */
 
 .cartao-cronos {
-  background-image: url(imagens/cronos-fundo.png);
-  background-position: 50% 25%;
-  margin: 3%;
-  width: 15%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
+background-image: url(imagens/cronos-fundo.png);
+background-position: 50% 25%;
+margin: 3%;
+width: 15%;
+text-align: center;
+justify-content: center;
+align-items: center;
+padding-bottom: 15px;
 }
 
 .cartao-cronos h1 {
-  font-size: 40pt;
-  text-align: center;
-  margin-top: -15%;
-  margin-right: 10px;
-  justify-items: center;
-  align-items: center;
+font-size: 40pt;
+text-align: center;
+margin-top: -15%;
+margin-right: 10px;
+justify-items: center;
+align-items: center;
 }
 
 #h1-cronos {
-  font-size: 15pt;
-  margin-right: -2px;
-  margin-top: -5px;
-  font-weight: 600;
+font-size: 15pt;
+margin-right: -2px;
+margin-top: -5px;
+font-weight: 600;
 }
 
 h1 sup {
-  font-size: 9pt;
-  top: -30px;
-  font-weight: 600;
+font-size: 9pt;
+top: -30px;
+font-weight: 600;
 }
 
 h1 p {
-  font-size: 9pt;
-  margin-left: 15px;
-  margin-top: -10px;
-  font-weight: 600;
+font-size: 9pt;
+margin-left: 15px;
+margin-top: -10px;
+font-weight: 600;
 }
 
 /* :SUN TZU */
 
 .cartao-suntzu {
-  background-image: url(imagens/suntzu-fundo.png);
-  background-position: 50% 25%;
-  margin: 3%;
-  width: 15%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
+background-image: url(imagens/suntzu-fundo.png);
+background-position: 50% 25%;
+margin: 3%;
+width: 15%;
+text-align: center;
+justify-content: center;
+align-items: center;
+padding-bottom: 15px;
 }
 
 .cartao-suntzu h1 {
-  font-size: 40pt;
-  text-align: center;
-  margin-top: -15%;
-  margin-right: 10px;
-  justify-items: center;
-  align-items: center;
+font-size: 40pt;
+text-align: center;
+margin-top: -15%;
+margin-right: 10px;
+justify-items: center;
+align-items: center;
 }
 
 #h1-suntzu {
-  font-size: 15pt;
-  margin-right: -2px;
-  margin-top: -5px;
-  font-weight: 600;
+font-size: 15pt;
+margin-right: -2px;
+margin-top: -5px;
+font-weight: 600;
 }
 
 h1 sup {
-  font-size: 9pt;
-  top: -30px;
-  font-weight: 600;
+font-size: 9pt;
+top: -30px;
+font-weight: 600;
 }
 
 h1 p {
-  font-size: 9pt;
-  margin-left: 15px;
-  margin-top: -10px;
-  font-weight: 600;
+font-size: 9pt;
+margin-left: 15px;
+margin-top: -10px;
+font-weight: 600;
 }
 
 /* :BOTÕES "COMPRAR" */
 
 #comprar-btn {
-  background: #E90303;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
+background: #E90303;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+}
+
+/* CARROSEL */
+
+.carousel {
+  max-width: 600px !important; /* Adjust the maximum width as needed */
+  max-height: 600px !important; /* Adjust the maximum height as needed */
+  margin: 0 auto !important; /* Center the carousel horizontally */
+}
+
+.carousel-inner img {
+  max-width: 600px !important; /* Adjust the maximum width as needed */
+  max-height: 600px !important; /* Adjust the maximum height as needed */
+  margin: 0 auto !important; /* Center the carousel horizontally */
+  width: 100% !important;
+  height: 100% !important;
 }

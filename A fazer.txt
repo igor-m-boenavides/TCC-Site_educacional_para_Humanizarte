@@ -1,6 +1,7 @@
 LISTA DE A FAZERES:
 
-01. Carrosel
+---------01. Carrosel---------
+            01.1 - Sistema de edição de slides
 
 02. Consertar roda pé
 
@@ -19,6 +20,7 @@ LISTA DE A FAZERES:
 09. Sistema de controle de sessão
 
 ---------10. Sistema de alteração de dados do usuário---------
+            10.1 - CSS da página update
 
 11. Estudar sistema de incorporamento de vídeos (Vimeo)
 

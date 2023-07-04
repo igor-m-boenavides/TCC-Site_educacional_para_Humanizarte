@@ -32,19 +32,28 @@
     <form action="cadastroAluno.php" method="POST">
         <div class="form-group">
             <label for="nome">Nome de usuário</label>
-            <input type="text" class="form-control" name="nome" id="nome" placeholder="&#xf007; Digite o nome do usuário" style="font-family:Arial, FontAwesome">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="&#xf007; Digite o nome do usuário" style="font-family:Arial, FontAwesome" required>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="&#xf0e0; Digite o email do usuário" style="font-family:Arial, FontAwesome">
+            <input type="email" class="form-control" name="email" id="email" placeholder="&#xf0e0; Digite o email do usuário" style="font-family:Arial, FontAwesome" required>
         </div>
         <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="&#xf095; Digite o telefone do usuário" style="font-family:Arial, FontAwesome">
+            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="&#xf095; Digite o telefone do usuário" style="font-family:Arial, FontAwesome" required>
         </div>
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" name="senha" id="senha" placeholder="&#xf023; Digite a senha do usuário" style="font-family:Arial, FontAwesome" name="">
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="&#xf023; Digite a senha do usuário" style="font-family:Arial, FontAwesome" required>
+        </div>
+        <div class="form-group" id="turmas">
+            <div style="font-weight: bold;">TURMAS</div>
+            <input class="form-check-input" type="checkbox" value="1" id="logos" name="turma[]">
+            <label class="form-check-label" for="logos">Logos</label>
+            <input class="form-check-input" type="checkbox" value="2" id="cronos" name="turma[]">
+            <label class="form-check-label" for="cronos">Cronos</label>
+            <input class="form-check-input" type="checkbox" value="3" id="suntzu" name="turma[]">
+            <label class="form-check-label" for="suntzu">Sun Tzu</label>
         </div>
         <div class="form-check">
         <div class="btn-cadastro">
