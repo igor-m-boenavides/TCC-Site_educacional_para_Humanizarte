@@ -3,18 +3,18 @@
 class aluno {
 
     public function login($nome, $senha) {
-        global $pdo;
+        require 'conn.php';
 
         $sql = "SELECT * FROM aluno WHERE nome = :nome AND senha = :senha";
-        $sql = $pdo -> prepare($sql);
-        $sql -> bindValue("nome", $nome);
-        $sql -> bindValue("senha", $senha);
-        $sql -> execute();
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":nome", $nome);
+        $stmt->bindValue(":senha", $senha);
+        $stmt->execute();
 
-        if($sql -> rowCount() > 0) {
-            $dado = $sql -> fetch();
+        if ($stmt->rowCount() > 0) {
+            $dado = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $_SESSION['userID'] = $dado['id'];
+            $_SESSION['userID'] = $dado['id_aluno'];
 
             return true;
         } else {

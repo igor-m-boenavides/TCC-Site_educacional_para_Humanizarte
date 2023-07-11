@@ -21,6 +21,30 @@
 </head>
 <body>
 
+<?php
+require_once '../conn/conn.php';
+
+// Acessar o ID do usuário
+$userID = isset($_SESSION['userID']) ? $_SESSION['userID'] : null;
+
+// Verificar se o usuário está logado
+if ($userID) {
+  $sql = "SELECT * FROM aluno_turma WHERE id_aluno = :userID";
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindValue(":userID", $userID);
+  $stmt->execute();
+
+  if ($stmt->rowCount() > 0) {
+    $result = $stmt->fetchAll();
+    $turmas = array_column($result, 'id_turma');
+  } else {
+    $turmas = [];
+  }
+} else {
+  $turmas = [];
+}
+?>
+
 <!-- BARRA DE NAVEGAÇÃO -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
@@ -57,22 +81,58 @@
 
 <h1 class="titulo">Suas turmas</h1>
 <div class="area-turmas">
+  <?php if (in_array(1, $turmas)) { ?>
+    <div class="logos">
+      <h1>LOGOS</h1>
+      <div class="logos-entrar"><a href="logos.html">ENTRAR</a></div>
+      <i class="bi bi-book-half" id="logos-icone"></i>
+    </div>
+  <?php } ?>
+
+  <?php if (in_array(2, $turmas)) { ?>
+    <div class="cronos">
+      <h1>CRONOS</h1>
+      <div class="cronos-entrar"><a href="cronos.html">ENTRAR</a></div>
+      <i class="bi bi-hourglass-bottom" id="cronos-icone"></i>
+    </div>
+  <?php } ?>
+
+  <?php if (in_array(3, $turmas)) { ?>
+    <div class="suntzu">
+      <h1>SUN TZU</h1>
+      <div class="suntzu-entrar"><a href="suntzu.html">ENTRAR</a></div>
+      <i class="bi bi-shield-shaded" id="suntzu-icone"></i>
+    </div>
+  <?php } ?>
+</div>
+
+<!-- FIM TURMAS -->
+
+
+<!-- <h1 class="titulo">Suas turmas</h1>
+<div class="area-turmas">
   <div class="logos">
     <h1>LOGOS</h1>
     <div class="logos-entrar"><a href="logos.html">ENTRAR</a></div>
     <i class="bi bi-book-half" id="logos-icone"></i>
   </div>
+
+
+
   <div class="cronos">
     <h1>CRONOS</h1>
     <div class="cronos-entrar"><a href="cronos.html">ENTRAR</a></div>
     <i class="bi bi-hourglass-bottom" id="cronos-icone"></i>
   </div>
+
+
+
   <div class="suntzu">
     <h1>SUN TZU</h1>
     <div class="suntzu-entrar"><a href="suntzu.html">ENTRAR</a></div>
     <i class="bi bi-shield-shaded" id="suntzu-icone"></i>
   </div>
-</div>
+</div> -->
 
 <!-- FIM TURMAS -->
 

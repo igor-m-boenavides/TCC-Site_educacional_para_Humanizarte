@@ -1,13 +1,13 @@
-CREATE DATABASE IF NOT EXISTS humanizarte;
+CREATE DATABASE IF NOT EXISTS teste;
 
-USE humanizarte;
+USE teste;
 
 CREATE TABLE IF NOT EXISTS aluno (
     id_aluno INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL,
+    username VARCHAR(45) NOT NULL,
     email VARCHAR(45) NOT NULL,
-    telefone VARCHAR(45) NOT NULL,
-    senha VARCHAR(45) NOT NULL,
+    phone VARCHAR(45) NOT NULL,
+    password VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_aluno)
 ) ENGINE=InnoDB;
 

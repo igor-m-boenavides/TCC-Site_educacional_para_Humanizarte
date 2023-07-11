@@ -1,3 +1,14 @@
+<?php
+if (isset($_GET['id'])) {
+    $user_id = $_GET['id'];
+} else {
+    echo "ID do usuário não fornecido.";
+    // ou redirecionar para a página de listagem, por exemplo:
+    // header("Location: alunos.php");
+    // exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +36,7 @@
             global $pdo;
 
             // Prepare the update statement
-            $stmt = $pdo->prepare("UPDATE humanizarte.aluno SET nome = ?, email = ?, telefone = ?, senha = ? WHERE id = ?");
+            $stmt = $pdo->prepare("UPDATE humanizarte.aluno SET nome = COALESCE(?, nome), email = COALESCE(?, email), telefone = COALESCE(?, telefone), senha = COALESCE(?, senha) WHERE id_aluno = ?");
 
             // Bind parameters
             $stmt->bindParam(1, $novo_nome);
@@ -47,14 +58,13 @@
 
         if (isset($_POST['submit'])) {
             // Get form data
-            $user_id = $_POST['user_id'];
             $novo_nome = $_POST['novo_nome'];
             $novo_email = $_POST['novo_email'];
             $novo_telefone = $_POST['novo_telefone'];
             $nova_senha = $_POST['nova_senha'];
 
-            // Call the update function
-            updateUserInfo($user_id, $novo_nome, $novo_email, $novo_telefone, $nova_senha);
+            // Call the update function with non-empty fields only
+            updateUserInfo($user_id, !empty($novo_nome) ? $novo_nome : null, !empty($novo_email) ? $novo_email : null, !empty($novo_telefone) ? $novo_telefone : null, !empty($nova_senha) ? $nova_senha : null);
         }
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
@@ -63,7 +73,7 @@
 
     <form method="post" action="">
         <label for="user_id">User ID:</label>
-        <input type="text" name="user_id" value="<?php echo $_GET['user_id'] ?? ''; ?>" required><br>
+        <input type="text" name="user_id" value="<?php echo $user_id; ?>" required><br>
 
         <label for="novo_nome">Novo nome:</label>
         <input type="text" name="novo_nome"><br>

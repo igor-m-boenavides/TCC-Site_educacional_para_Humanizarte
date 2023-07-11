@@ -31,6 +31,12 @@
 </head>
 <body>
 
+<?php
+
+require_once '../conn/conn.php';
+
+?>
+
 <!-- BARRA DE NAVEGAÇÃO -->
 
 <div class="navbar">
@@ -41,7 +47,7 @@
   <nav class="lista-menu">
     <ul class="menu-items">
       <li id="atual"><a href="#">Ínicio</a></li>
-      <li><a href="../suas turmas/turmas.html">Suas turmas</a></li>
+      <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
       <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
       <li><a href="../conta/conta.html">Conta</a></li>
     </ul>

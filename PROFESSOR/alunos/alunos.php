@@ -94,29 +94,40 @@ try {
 ?>
 
 <table class="table">
-<!-- Your existing code -->
 <tbody>
-  <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-  <tr>
-    <td><?php echo htmlspecialchars($row['id']); ?></td>
-    <td><?php echo htmlspecialchars($row['nome']); ?></td>
-    <td><?php echo htmlspecialchars($row['email']); ?></td>
-    <td><?php echo htmlspecialchars($row['senha']); ?></td>
-    <td><?php 
-    
-    $senha = htmlspecialchars($row['senha']);
-    if ($senha == 1) {
-        echo "Logos";
-    } else if ($senha == 2) {
-        echo "Cronos";
-    } else {
-        echo "Suntzu";
-    };
-    
-    ?></td>
-    <td><a href="./update.php?user_id=<?php echo htmlspecialchars($row['id']); ?>"><i class="bi bi-pen"></i></a></td>
-  </tr>
-  <?php endwhile; ?>
+<tr>
+  <th>ID</th>
+  <th>Nome de usuário</th>
+  <th>Email</th>
+  <th>Telefone</th>
+  <th>Turma</th>
+  <th>Editar</th>
+  <th>Excluir</th>
+</tr>
+<?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+<tr>
+  <td><?php echo htmlspecialchars($row['id_aluno']); ?></td>
+  <td><?php echo htmlspecialchars($row['nome']); ?></td>
+  <td><?php echo htmlspecialchars($row['email']); ?></td>
+  <td><?php echo htmlspecialchars($row['telefone']); ?></td>
+  <td>Turma</td>
+  <td>
+    <p style="padding: 0; margin: 0;">
+      <a href="update.php?id=<?php echo $row['id_aluno']; ?>" style="color: blue;">
+        <i class="bi bi-pen-fill"></i>
+        </a>
+    </p>
+  </td>
+  <td>
+    <form method="post" action="delete.php" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');">
+      <input type="hidden" name="id_aluno" value="<?php echo $row['id_aluno']; ?>">
+      <button type="submit" name="excluir" style="border: none; background: none; color: red;">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </form>
+  </td>
+</tr>
+<?php endwhile; ?>
 </tbody>
 </table>
 

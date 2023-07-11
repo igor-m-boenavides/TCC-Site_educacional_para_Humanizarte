@@ -1,7 +1,5 @@
 <?php
 
-// session_start();
-
 if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
 
     require 'conn.php';
@@ -14,14 +12,13 @@ if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && 
 
     if($u -> login($nome, $senha) == true) {
         if(isset($_SESSION['userID'])) {
-            header("Location: ../index/index.html");
-        } else {
-            header("Location: login.html");
-        };
-    };
-
-} else {
-    header("Location: login.html");
+            header("Location: ../../CADASTRADO/index/index.php");
+            exit(); // Adicione esta linha para evitar que o código continue executando após o redirecionamento.
+        }
+    }
 }
+
+header("Location: login.html");
+exit(); // Adicione esta linha para evitar que o código continue executando após o redirecionamento.
 
 ?>
