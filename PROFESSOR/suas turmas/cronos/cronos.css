@@ -119,32 +119,22 @@ header .titulo {
 
 /* AULAS */
 
-.aulas {
+details > summary {
+  padding: 13px;
+  background-color: #F8B134;
+  box-shadow: 3px 3px 2px rgb(58, 58, 58);
+  cursor: pointer;
+}
+
+details > p {
+  background-color: #F8B134;
+  padding: 1%;
   margin: 0;
-  margin-top: 2%;
+  border-bottom: 2px solid #ad7b24;
 }
 
-.aulas #botao {
-  background-color: #F8B134;
-  width: 100%;
-  text-align: left;
-  border: none;
-  border-radius: 20px;
-  color: black;
-}
-
-.aulas .dropdown {
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-bottom: 2%;
-}
-
-.aulas .dropdown .dropdown-menu {
-  background-color: #F8B134;
-  width: 100%;
-  margin-left: 3%;
-  margin-right: 3%;
-
+.aula {
+  margin: 1%;
 }
 
 
