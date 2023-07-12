@@ -1,228 +1,228 @@
 /* GERAL */
 
 @font-face {
-  font-family: Roboto;
-  src: url(fontes/Roboto-Regular.ttf);
-}
-
-body {
-  background: #F8B134 !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 0 !important ;
-  margin: 0 !important;
-  font-family: Roboto !important;
-}
-
-/* BARRA DE NAVEGAÇÃO */
-
-.navbar {
-margin: 1%;
-margin-left: 2%;
-margin-right: 2%;
-height: 60px;
-border-radius: 100px;
-}
-
-#navbar #logo_texto {
-margin-left: 2%;
-margin-right: 57%;
-font-weight: bold;
-}
-
-#navbar #logo_texto img {
-margin-right: 10%;
-}
-
-#navbar .nav-link {
-color: black;
-font-weight: 600;
-}
-
-/* RODA PÉ */
-
-.roda-pe {
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: whitesmoke;
-text-align: center;
-}
-
-.roda-pe h1 {
-font-size: 20px;
-font-weight: 600;
-margin-top: 1%;
-margin-bottom: 1%;
-}
-
-.roda-pe #logo-roda-pe {
-width: 50px;
-height: 50px;
-margin-top: 1%;
-margin-right: -13%;
-}
-
-.roda-pe #copyright {
-color: lightgray;
-font-weight: 500;
-margin-top: 0;
-}
-
-.roda-pe .contato {
-float: right;
-margin: 1%;
-margin-right: 5%;
-color: lightgray;
-font-size: 20pt;
-}
-
-.roda-pe .contato #ig-icon #fb-icon #yt-icon {
-padding: 10px;
-}
-
-/* FIM RODA PÉ */
-
-/* CURSOS */
-
-.area-turmas {
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.titulo {
-  margin-left: 7%;
+    font-family: Roboto;
+    src: url(fontes/Roboto-Regular.ttf);
+  }
+  
+  body {
+    background: #F8B134 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important ;
+    margin: 0 !important;
+    font-family: Roboto !important;
+  }
+  
+  /* BARRA DE NAVEGAÇÃO */
+  
+  .navbar {
+  margin: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 60px;
+  border-radius: 100px;
+  }
+  
+  #navbar #logo_texto {
+  margin-left: 2%;
+  margin-right: 57%;
   font-weight: bold;
-  font-size: 40pt;
-  margin-top: 3%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+  }
+  
+  #navbar #logo_texto img {
+  margin-right: 10%;
+  }
+  
+  #navbar .nav-link {
   color: black;
-}
-
-.logos {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.logos #logos-icone {
-  font-size: 60pt;
-  color: #E34234;
-}
-
-.logos-entrar {
-  position: absolute;
+  font-weight: 600;
+  }
+  
+  /* RODA PÉ */
+  
+  .roda-pe {
+  left: 0;
   bottom: 0;
   width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
-}
-
-.logos-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.logos h1 {
-  font-size: 22pt;
-  font-weight: 600;
-  margin-top: -10%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-  color: black;
-}
-
-.cronos {
   background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  position: relative;
-  justify-content: center;
   text-align: center;
-  position: relative;
-}
-
-.cronos #cronos-icone {
-  font-size: 60pt;
-  color: #0FA3B1;
-}
-
-.cronos-entrar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
-}
-
-.cronos-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.cronos h1 {
-  font-size: 22pt;
+  }
+  
+  .roda-pe h1 {
+  font-size: 20px;
   font-weight: 600;
-  margin-top: -10%;
-  color: black;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-}
-
-.suntzu {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.suntzu #suntzu-icone {
-  font-size: 60pt;
-  color: #7AC74F;
-}
-
-.suntzu-entrar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
-}
-
-.suntzu-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.suntzu h1 {
-  font-size: 22pt;
-  font-weight: 600;
-  margin-top: -10%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-  color: black;
-}
+  margin-top: 1%;
+  margin-bottom: 1%;
+  }
+  
+  .roda-pe #logo-roda-pe {
+  width: 50px;
+  height: 50px;
+  margin-top: 1%;
+  margin-right: -13%;
+  }
+  
+  .roda-pe #copyright {
+  color: lightgray;
+  font-weight: 500;
+  margin-top: 0;
+  }
+  
+  .roda-pe .contato {
+  float: right;
+  margin: 1%;
+  margin-right: 5%;
+  color: lightgray;
+  font-size: 20pt;
+  }
+  
+  .roda-pe .contato #ig-icon #fb-icon #yt-icon {
+  padding: 10px;
+  }
+  
+  /* FIM RODA PÉ */
+  
+  /* CURSOS */
+  
+  .area-turmas {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .titulo {
+    margin-left: 7%;
+    font-weight: bold;
+    font-size: 40pt;
+    margin-top: 3%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
+  }
+  
+  .logos {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .logos #logos-icone {
+    font-size: 60pt;
+    color: #E34234;
+  }
+  
+  .logos-entrar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .logos-entrar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logos h1 {
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
+  }
+  
+  .cronos {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .cronos #cronos-icone {
+    font-size: 60pt;
+    color: #0FA3B1;
+  }
+  
+  .cronos-entrar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .cronos-entrar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cronos h1 {
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    color: black;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+  }
+  
+  .suntzu {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .suntzu #suntzu-icone {
+    font-size: 60pt;
+    color: #7AC74F;
+  }
+  
+  .suntzu-entrar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .suntzu-entrar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .suntzu h1 {
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
+  }

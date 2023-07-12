@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $id_aula = $pdo->lastInsertId(); // Obter o ID da última aula inserida
 
-    // Obter a turma "Cronos" (id_turma = 1)
-    $id_turma = 1;
+    // Obter a turma "Cronos" (id_turma = 2)
+    $id_turma = 2;
 
     // Inserir os dados na tabela "aula_turma"
     $stmt = $pdo->prepare('INSERT INTO aula_turma (id_aula, id_turma) VALUES (:id_aula, :id_turma)');

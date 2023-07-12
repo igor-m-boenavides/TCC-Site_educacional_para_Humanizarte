@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
-    <link rel="stylesheet" href=cronos.css>
+    <link rel="stylesheet" href=suntzu.css>
     
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
 
-  <a class="navbar-brand" href="#" id="logo_texto"><img alt="Logo Humanizarte" src="imagens/logo.png" width="40" height="40">Humanizarte</a>
+  <a class="navbar-brand" href="#" id="logo_texto"><img alt="Logo Humanizarte" src="../imagens/logo.png" width="40" height="40">Humanizarte</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,14 +35,14 @@
   <div class="collapse navbar-collapse" id="navbarNav">
 
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Ínicio</span></a>
-      </li>
-      <li class="nav-item" style="text-decoration: underline;">
-        <a class="nav-link" href="#">Suas turmas</a>
+      <li class="nav-item active" style="text-decoration: underline;">
+        <a class="nav-link" href="#">Suas turmas</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sobre nós</a>
+        <a class="nav-link" href="#">Alunos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Estatísticas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Conta</a>
@@ -57,7 +57,7 @@
 
 <!-- CABEÇALHO -->
 
-<h1 class="titulo"><i class="bi bi-book-half"></i>  Turma CRONOS </h1>
+<h1 class="titulo"><i class="bi bi-book-half"></i>  Turma SUN TZU </h1>
 
 </header>
 
@@ -65,42 +65,47 @@
 
 <!-- AULAS -->
 
-<div class="aulas">
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 3
-  </a>
+<!-- CADASTRO -->
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
+<div class="botao-cadastro">
+  <p><a href="cadastroSuntzu.html"><i class="bi bi-plus-circle-fill" id="add-aula"></i> Cadastrar aula</a></p>
 </div>
 
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 2
-  </a>
+<!-- FIM CADASTRO -->
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
+<!-- LISTA DE AULAS -->
+
+<div class="aula">
+  <?php
+  // Conectar ao banco de dados
+  $host = 'localhost';
+  $db = 'humanizarte';
+  $user = 'root';
+  $password = '';
+
+  try {
+      $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      // Consultar as aulas da turma "Suntzu" (id_turma = 3)
+      $stmt = $pdo->prepare('SELECT a.nome, a.url_video, a.nome_video, a.url_anexo, a.nome_anexo FROM aula a INNER JOIN aula_turma at ON a.id_aula = at.id_aula WHERE at.id_turma = 3');
+      $stmt->execute();
+      $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach ($aulas as $aula) {
+          echo '<details>';
+          echo '<summary style="color: black;">' . $aula['nome'] . '</summary>';
+          echo '<p><a target="_blank" style="color: black; text-decoration: none;" href="' . $aula['url_video'] . '"> <i class="bi bi-youtube"></i> ' . $aula['nome_video'] . '</a></p>';
+          echo '<p><a style="color: black; text-decoration: none;" href="' . $aula['url_anexo'] . '" download><i class="fa fa-file-text-o"></i> ' . $aula['nome_anexo'] . '</a></p>';
+          echo '</details>';
+      }
+  } catch (PDOException $e) {
+      echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
+  }
+  ?>
 </div>
 
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 1
-  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
-</div>
-</div>
-
-<!-- FIM AULAS -->
+<!-- FIM LISTA DE AULAS -->
 
 <!-- RODA PÉ -->
 
@@ -112,7 +117,7 @@
       <i class="bi bi-facebook" id="fb-icon"></i>
       <i class="bi bi-youtube" id="yt-icon"></i>
     </div>
-    <img src="imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
+    <img src="../imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
     <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black">Política de Privacidade</a> | <a href="#"  style="color:black">Política de Segurança</a></p>

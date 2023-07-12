@@ -15,9 +15,10 @@ LISTA DE A FAZERES:
 
 07. Página "Conta"
 
-08. Sistema de gerenciamento de aulas
+---------08. Sistema de gerenciamento de aulas---------
+            08.1 - Sistema de alteração de aulas
 
-09. Sistema de controle de sessão
+---------09. Sistema de controle de sessão---------
 
 ---------10. Sistema de alteração de dados do usuário---------
             10.1 - CSS da página update

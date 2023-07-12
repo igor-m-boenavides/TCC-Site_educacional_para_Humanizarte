@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fontes/Roboto-Regular.ttf);
+}
+
+body {
+    background: #F8B134 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+* {
+    font-family: Roboto;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 610px;
+    background: #F5F5F5;
+    border-radius: 17px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.entrar {
+    margin-top: 20px;
+    text-align: center;
+    font-style: bold;
+}
+
+.entrar h2 {
+    font-size: 30pt;
+    color: black;
+}
+
+.logo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.nome {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form-group {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#nome, #descricao, #video {
+    border: 0;
+    border-radius: 0;
+    background: whitesmoke;
+    border-bottom: 2px solid black;
+    margin-bottom: 5%;
+    outline: none !important;
+}
+
+#anexo {
+    border: 2px solid black;
+    border-radius: 0;
+}
+
+#nome:focus,  #nome:active, #descricao:focus, #descricao:active, #video:focus, #video:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+form p{
+    margin-top: 7%;
+    margin-right: 8%;
+    display: flex;
+    justify-content: right;
+    color: blue;
+}
+
+#btn-cadastro {
+    font-size: 13pt;
+    border-radius: 155px;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0F0F0F;
+}
+
+.btn-cadastro {
+    margin-top: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-entrar {
+    border: 0;
+    background-color: whitesmoke;
+}
+
+.btn-entrar {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-entrar a {
+    color: black;
+    text-decoration: none;
+}

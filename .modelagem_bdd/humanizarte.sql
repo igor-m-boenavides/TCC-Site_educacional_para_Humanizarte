@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS turma (
     PRIMARY KEY (id_turma)
 ) ENGINE=InnoDB;
 
-INSERT INTO turma (id_turma, nome) VALUES (1, 'Logos'), (2, 'Cronos'), (3, 'Sun Tzu');
+INSERT INTO turma (id_turma, nome) VALUES (1, 'Logos'), (2, 'Cronos'), (3, 'Sun Tzu'), (4, 'Professor');
 
 DROP TABLE IF EXISTS aluno_turma;
 CREATE TABLE IF NOT EXISTS aluno_turma (

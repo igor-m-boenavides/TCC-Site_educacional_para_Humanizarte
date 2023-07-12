@@ -84,7 +84,7 @@ if ($userID) {
   <?php if (in_array(1, $turmas)) { ?>
     <div class="logos">
       <h1>LOGOS</h1>
-      <div class="logos-entrar"><a href="logos.html">ENTRAR</a></div>
+      <div class="logos-entrar"><a href="logos/logos.php">ENTRAR</a></div>
       <i class="bi bi-book-half" id="logos-icone"></i>
     </div>
   <?php } ?>
@@ -92,7 +92,7 @@ if ($userID) {
   <?php if (in_array(2, $turmas)) { ?>
     <div class="cronos">
       <h1>CRONOS</h1>
-      <div class="cronos-entrar"><a href="cronos.html">ENTRAR</a></div>
+      <div class="cronos-entrar"><a href="cronos/cronos.php">ENTRAR</a></div>
       <i class="bi bi-hourglass-bottom" id="cronos-icone"></i>
     </div>
   <?php } ?>
@@ -100,39 +100,11 @@ if ($userID) {
   <?php if (in_array(3, $turmas)) { ?>
     <div class="suntzu">
       <h1>SUN TZU</h1>
-      <div class="suntzu-entrar"><a href="suntzu.html">ENTRAR</a></div>
+      <div class="suntzu-entrar"><a href="suntzu/suntzu.php">ENTRAR</a></div>
       <i class="bi bi-shield-shaded" id="suntzu-icone"></i>
     </div>
   <?php } ?>
 </div>
-
-<!-- FIM TURMAS -->
-
-
-<!-- <h1 class="titulo">Suas turmas</h1>
-<div class="area-turmas">
-  <div class="logos">
-    <h1>LOGOS</h1>
-    <div class="logos-entrar"><a href="logos.html">ENTRAR</a></div>
-    <i class="bi bi-book-half" id="logos-icone"></i>
-  </div>
-
-
-
-  <div class="cronos">
-    <h1>CRONOS</h1>
-    <div class="cronos-entrar"><a href="cronos.html">ENTRAR</a></div>
-    <i class="bi bi-hourglass-bottom" id="cronos-icone"></i>
-  </div>
-
-
-
-  <div class="suntzu">
-    <h1>SUN TZU</h1>
-    <div class="suntzu-entrar"><a href="suntzu.html">ENTRAR</a></div>
-    <i class="bi bi-shield-shaded" id="suntzu-icone"></i>
-  </div>
-</div> -->
 
 <!-- FIM TURMAS -->
 

@@ -68,45 +68,44 @@
 <!-- CADASTRO -->
 
 <div class="botao-cadastro">
-  <p><a href="cadastroAulaSuntzu.html"><i class="bi bi-plus-circle-fill" id="add-aula"></i> Cadastrar aula</a></p>
+  <p><a href="cadastroSuntzu.html"><i class="bi bi-plus-circle-fill" id="add-aula"></i> Cadastrar aula</a></p>
 </div>
 
-<div class="aulas">
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 3
-  </a>
+<!-- FIM CADASTRO -->
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
+<!-- LISTA DE AULAS -->
+
+<div class="aula">
+  <?php
+  // Conectar ao banco de dados
+  $host = 'localhost';
+  $db = 'humanizarte';
+  $user = 'root';
+  $password = '';
+
+  try {
+      $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      // Consultar as aulas da turma "Suntzu" (id_turma = 3)
+      $stmt = $pdo->prepare('SELECT a.nome, a.url_video, a.nome_video, a.url_anexo, a.nome_anexo FROM aula a INNER JOIN aula_turma at ON a.id_aula = at.id_aula WHERE at.id_turma = 3');
+      $stmt->execute();
+      $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach ($aulas as $aula) {
+          echo '<details>';
+          echo '<summary style="color: black;">' . $aula['nome'] . '</summary>';
+          echo '<p><a target="_blank" style="color: black; text-decoration: none;" href="' . $aula['url_video'] . '"> <i class="bi bi-youtube"></i> ' . $aula['nome_video'] . '</a></p>';
+          echo '<p><a style="color: black; text-decoration: none;" href="' . $aula['url_anexo'] . '" download><i class="fa fa-file-text-o"></i> ' . $aula['nome_anexo'] . '</a></p>';
+          echo '</details>';
+      }
+  } catch (PDOException $e) {
+      echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
+  }
+  ?>
 </div>
 
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 2
-  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
-</div>
-
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botao" data-bs-toggle="dropdown" aria-expanded="false">
-    Aula 1
-  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-youtube"></i> Aula 1 - As questões morais e éticas (VÍDEO)</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i> Aula 1 - As questões morais e éticas (PDF)</a></li>
-  </ul>
-</div>
-</div>
-
-<!-- FIM AULAS -->
+<!-- FIM LISTA DE AULAS -->
 
 <!-- RODA PÉ -->
 
