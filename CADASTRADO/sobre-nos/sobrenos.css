@@ -47,58 +47,48 @@ body {
 
 /* RODA PÉ */
 
-.roda-pe {
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.rodape {
   background-color: whitesmoke;
   text-align: center;
-  }
-  
-  .roda-pe h1 {
-  font-size: 20px;
+  margin-top: 2%;
+  font-size: 10pt;
+}
+
+.roda-pe h1 {
+  font-size: 17pt;
   font-weight: 600;
   margin-top: 1%;
   margin-bottom: 1%;
-  }
+}
   
-  .roda-pe #logo-roda-pe {
+.roda-pe #logo-roda-pe {
   width: 50px;
   height: 50px;
   margin-top: 1%;
   margin-right: -13%;
-  }
+}
   
-  .roda-pe #copyright {
+.roda-pe #copyright {
   color: lightgray;
   font-weight: 500;
   margin-top: 0;
-  }
+}
   
-  .roda-pe .contato {
+.roda-pe .contato {
   float: right;
   margin: 1%;
   margin-right: 5%;
   color: lightgray;
   font-size: 20pt;
-  }
+}
   
-  .roda-pe .contato #ig-icon #fb-icon #yt-icon {
+.roda-pe .contato #ig-icon #fb-icon #yt-icon {
   padding: 10px;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #F8B134;
-    text-align: center;
-  }
+}
   
-  /* FIM RODA PÉ */
+/* FIM RODA PÉ */
 
-  /* SOBRE NÓS */
+/* SOBRE NÓS */
 
 .area {
   margin-top: 5%;
@@ -136,13 +126,12 @@ body {
 
 .sobre_nos .titulo {
   width: 80%;
-  height: 100px;
-  transform: rotate(-90deg);
   background-color: #0F0F0F;
   color: whitesmoke;
   font-size: 25pt;
   display: flex;
   align-items: center;
+  padding: 2%;
 }
 
 .sobre_nos .texto {
@@ -150,3 +139,34 @@ body {
 }
 
   /* FIM SOBRE NÓS */
+
+/* EQUIPE */
+
+.equipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 2%; /* Ajuste este valor conforme necessário */
+}
+
+.mary, .igor, .fulano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Adjust spacing between individuals */
+}
+
+.equipe .imagem {
+  width: 100px; /* Adjust image width */
+  height: 100px; /* Adjust image height */
+  background-color: lightgray; /* Placeholder color */
+  border-radius: 50%;
+}
+
+.nome {
+  margin-top: 10px; /* Adjust spacing between image and name */
+  text-align: center;
+}
+
+/* FIM EQUIPE */

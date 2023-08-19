@@ -51,17 +51,15 @@ body {
 
 /* RODA PÉ */
 
-.roda-pe {
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.rodape {
   background-color: whitesmoke;
   text-align: center;
-  margin-top: 1%;
+  margin-top: 2%;
+  font-size: 10pt;
 }
-  
+
 .roda-pe h1 {
-  font-size: 20px;
+  font-size: 17pt;
   font-weight: 600;
   margin-top: 1%;
   margin-bottom: 1%;

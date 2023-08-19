@@ -70,7 +70,7 @@ require_once '../conn/conn.php';
   <!-- Slides -->
   <div class="carousel-inner">
       <div class="item active">
-          <img src="imagens/1.jpg" alt="Image 1">
+          <img src="imagens/imagem1.jpg" alt="Image 1">
           <div class="carousel-caption">
               <!-- <h3>Image 1</h3> -->
               <!-- <p>Description for Image 1</p> -->
@@ -78,7 +78,7 @@ require_once '../conn/conn.php';
       </div>
 
       <div class="item">
-          <img src="imagens/2.jpg" alt="Image 2">
+          <img src="imagens/imagem2.jpg" alt="Image 2">
           <div class="carousel-caption">
               <!-- <h3>Image 2</h3> -->
               <!-- <p>Description for Image 2</p> -->
@@ -86,7 +86,7 @@ require_once '../conn/conn.php';
       </div>
 
       <div class="item">
-          <img src="imagens/3.jpg" alt="Image 3">
+          <img src="imagens/imagem3.jpg" alt="Image 3">
           <div class="carousel-caption">
               <!-- <h3>Image 3</h3> -->
               <!-- <p>Description for Image 3</p> -->
@@ -108,7 +108,6 @@ require_once '../conn/conn.php';
 <!-- CARTÕES DE PREÇO -->
 
 <h1 id="h1-cursos">CURSOS</h1>
-<!-- <div class="cursos-titulo"></div> -->
 
 <div class="area-cartoes">
   <div class="cartao-logos">
@@ -158,8 +157,7 @@ require_once '../conn/conn.php';
 
 <!-- RODA PÉ -->
 
-<footer>
-
+<footer class="rodape">
   <div class="roda-pe">
     <div class="contato">
       <i class="bi bi-instagram" id="ig-icon"></i>
@@ -169,9 +167,8 @@ require_once '../conn/conn.php';
     <img src="imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black">Política de Privacidade</a> | <a href="#"  style="color:black">Política de Segurança</a></p>
+    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
   </div>
-
 </footer>
 
 <!-- FIM RODA PÉ -->
