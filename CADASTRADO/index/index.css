@@ -1,21 +1,16 @@
 /* GERAL */
 
-@font-face {
-  font-family: Roboto;
-  src: url(fontes/Roboto-Regular.ttf);
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-background: #F8B134 !important;
-position: absolute !important;
-top: 0 !important;
-left: 0 !important;
-width: 100% !important;
-height: 100% !important;
-padding: 0 !important;
-margin: 0 !important;
-font-family: Roboto !important;
+  background: #F8B134 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
+
+/* FIM GERAL */
 
 /* BARRA DE NAVEGAÇÃO */
 
@@ -26,6 +21,7 @@ font-family: Roboto !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar-logo {
@@ -65,7 +61,6 @@ font-family: Roboto !important;
 
 /* FIM BARRA DE NAVEGAÇÃO */
 
-
 /* RODA PÉ */
 
 .rodape {
@@ -73,6 +68,7 @@ font-family: Roboto !important;
   text-align: center;
   margin-top: 2%;
   font-size: 10pt;
+  margin-bottom: -2%;
 }
 
 .roda-pe h1 {
@@ -132,6 +128,8 @@ position: absolute;
 top: 20%;
 }
 
+/* FIM CARTÕES DE PREÇO */
+
 /* :LOGOS */
 
 .cartao-logos {
@@ -173,6 +171,8 @@ margin-left: 15px;
 margin-top: -10px;
 font-weight: 600;
 }
+
+/* :FIM LOGOS */
 
 /* :CRONOS */
 
@@ -216,6 +216,8 @@ margin-top: -10px;
 font-weight: 600;
 }
 
+/* :FIM CRONOS */
+
 /* :SUN TZU */
 
 .cartao-suntzu {
@@ -258,6 +260,8 @@ margin-top: -10px;
 font-weight: 600;
 }
 
+/* :FIM SUN TZU */
+
 /* :BOTÕES "COMPRAR" */
 
 #comprar-btn {
@@ -266,6 +270,8 @@ padding-left: 20px;
 padding-right: 20px;
 border-radius: 5px;
 }
+
+/* :FIM BOTÕES "COMPRA" */
 
 /* CARROSEL */
 
@@ -282,3 +288,5 @@ border-radius: 5px;
   display: block;
   margin: 0 auto;
 }
+
+/* FIM CARROSEL */

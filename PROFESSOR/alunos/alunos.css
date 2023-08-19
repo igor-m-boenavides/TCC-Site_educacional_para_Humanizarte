@@ -5,45 +5,65 @@
   src: url(fontes/Roboto-Regular.ttf);
 }
 
-body {
-  background: #F8B134 !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-family: Roboto !important;
+* {
+margin: 0;
+padding: 0;
 }
+
+body {
+background: #F8B134 !important;
+font-family: Roboto;
+}
+
+/* FIM GERAL */
 
 /* BARRA DE NAVEGAÇÃO */
 
 .navbar {
-margin: 1%;
-margin-left: 2%;
-margin-right: 2%;
-height: 60px;
-border-radius: 100px;
+  background-color: whitesmoke;
+  margin: 1%;
+  border-radius: 100px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#navbar #logo_texto {
-margin-left: 2%;
-margin-right: 57%;
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 900px; /* Adjusted */
+  display: flex;
+  align-items: center;
 }
 
-#navbar #logo_texto img {
-margin-right: 10%;
+.navbar-logo img {
+  margin-right: 5px;
 }
 
-#navbar .nav-link {
-color: black;
-font-weight: 600;
+.lista-menu .menu-items {
+  margin-top: 5%;
+  font-size: 11.5pt;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: auto; /* Added */
+}
+
+.lista-menu .menu-items li {
+  margin-right: 10px;
+}
+
+.lista-menu .menu-items li a {
+  color: black;
+  text-decoration: none;
 }
 
 #atual {
-text-decoration: underline;
+  text-decoration: underline !important;
 }
+
+/* FIM BARRA DE NAVEGAÇÃO */
 
 /* INICIO CADASTRO */
 

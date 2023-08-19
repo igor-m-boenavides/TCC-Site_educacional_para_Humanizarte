@@ -18,6 +18,15 @@
   <script src="https://kit.fontawesome.com/99d4636c93.js" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Add jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -47,35 +56,22 @@ if ($userID) {
 
 <!-- BARRA DE NAVEGAÇÃO -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-
-  <a class="navbar-brand" href="#" id="logo_texto"><img alt="Logo Humanizarte" src="imagens/logo.png" width="40" height="40">Humanizarte</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="../index/index.html">Ínicio</span></a>
-      </li>
-      <li class="nav-item" style="text-decoration: underline;">
-        <a class="nav-link" href="../suas turmas/turmas.php">Suas turmas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../sobre-nos/sobrenos.html">Sobre nós</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../conta/conta.html">Conta</a>
-      </li>
+<div class="navbar">
+  <a class="navbar-logo" style="color: black; text-decoration: none; font-size: 15pt;">
+    <img src="imagens/logo.png" width="50px" height="50px">
+    Humanizarte
+  </a>
+  <nav class="lista-menu">
+    <ul class="menu-items">
+      <li><a href="../index/index.php">Ínicio</a></li>
+      <li id="atual"><a href="../suas turmas/turmas.php">Suas turmas</a></li>
+      <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
+      <li><a href="../conta/conta.html">Conta</a></li>
     </ul>
+  </nav>
+</div>
 
-  </div>
-
-</nav>
-
-<!-- FIM BARRA DE NAVEGAÇÃO -->
+<!-- FIM DA BARRA DE NAVEGAÇÃO -->
 
 <!-- TURMAS -->
 

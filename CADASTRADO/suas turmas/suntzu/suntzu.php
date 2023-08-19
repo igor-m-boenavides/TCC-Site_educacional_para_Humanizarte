@@ -35,17 +35,17 @@
   <div class="collapse navbar-collapse" id="navbarNav">
 
     <ul class="navbar-nav">
-      <li class="nav-item active" style="text-decoration: underline;">
-        <a class="nav-link" href="#">Suas turmas</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="../../index/index.php">Ínicio</span></a>
+      </li>
+      <li class="nav-item"  style="text-decoration: underline;">
+        <a class="nav-link" href="../../suas turmas/turmas.php">Suas turmas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Alunos</a>
+        <a class="nav-link" href="../../sobre-nos/sobrenos.html">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Estatísticas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Conta</a>
+        <a class="nav-link" href="../../conta/conta.html">Conta</a>
       </li>
     </ul>
 
@@ -64,14 +64,6 @@
 <!-- FIM CABEÇALHO -->
 
 <!-- AULAS -->
-
-<!-- CADASTRO -->
-
-<div class="botao-cadastro">
-  <p><a href="cadastroSuntzu.html"><i class="bi bi-plus-circle-fill" id="add-aula"></i> Cadastrar aula</a></p>
-</div>
-
-<!-- FIM CADASTRO -->
 
 <!-- LISTA DE AULAS -->
 
@@ -109,8 +101,7 @@
 
 <!-- RODA PÉ -->
 
-<footer>
-
+<footer class="rodape">
   <div class="roda-pe">
     <div class="contato">
       <i class="bi bi-instagram" id="ig-icon"></i>
@@ -120,9 +111,8 @@
     <img src="../imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black">Política de Privacidade</a> | <a href="#"  style="color:black">Política de Segurança</a></p>
+    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
   </div>
-
 </footer>
 
 <!-- FIM RODA PÉ -->

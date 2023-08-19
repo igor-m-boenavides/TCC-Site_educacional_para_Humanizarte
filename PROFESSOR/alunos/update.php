@@ -13,6 +13,7 @@ if (isset($_GET['id'])) {
 <html>
 <head>
     <title>Update User Info</title>
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
     <h1>Update User Info</h1>

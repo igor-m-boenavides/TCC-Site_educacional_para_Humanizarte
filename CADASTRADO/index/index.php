@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<?
+<?php
 
 require_once '../conn/conn.php';
 
@@ -46,14 +46,13 @@ require_once '../conn/conn.php';
   </a>
   <nav class="lista-menu">
     <ul class="menu-items">
-      <li id="atual"><a href="#">Ínicio</a></li>
+      <li id="atual"><a href="../index/index.php">Ínicio</a></li>
       <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
       <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
       <li><a href="../conta/conta.html">Conta</a></li>
     </ul>
   </nav>
 </div>
-
 
 <!-- FIM DA BARRA DE NAVEGAÇÃO -->
 

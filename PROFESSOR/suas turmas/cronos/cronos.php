@@ -108,8 +108,7 @@
 
 <!-- RODA PÉ -->
 
-<footer>
-
+<footer class="rodape">
   <div class="roda-pe">
     <div class="contato">
       <i class="bi bi-instagram" id="ig-icon"></i>
@@ -118,10 +117,9 @@
     </div>
     <img src="../imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
-    <p>&copy; 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black">Política de Privacidade</a> | <a href="#"  style="color:black">Política de Segurança</a></p>
+    <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
+    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
   </div>
-
 </footer>
 
 <!-- FIM RODA PÉ -->
