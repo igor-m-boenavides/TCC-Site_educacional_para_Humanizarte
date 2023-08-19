@@ -136,13 +136,12 @@ body {
 
 .sobre_nos .titulo {
   width: 80%;
-  height: 100px;
-  transform: rotate(-90deg);
   background-color: #0F0F0F;
   color: whitesmoke;
   font-size: 25pt;
   display: flex;
   align-items: center;
+  padding: 2%;
 }
 
 .sobre_nos .texto {
@@ -150,3 +149,34 @@ body {
 }
 
   /* FIM SOBRE NÓS */
+
+/* EQUIPE */
+
+.equipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%; /* Adjust as needed */
+  margin-bottom: 20%;
+}
+
+.mary, .igor, .fulano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Adjust spacing between individuals */
+}
+
+.equipe .imagem {
+  width: 100px; /* Adjust image width */
+  height: 100px; /* Adjust image height */
+  background-color: lightgray; /* Placeholder color */
+  border-radius: 50%;
+}
+
+.nome {
+  margin-top: 10px; /* Adjust spacing between image and name */
+  text-align: center;
+}
+
+/* FIM EQUIPE */

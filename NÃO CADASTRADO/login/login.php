@@ -1,7 +1,5 @@
 <?php
-
-if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
-
+if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
     require 'conn.php';
     require 'userClass.php';
 
@@ -10,15 +8,17 @@ if(isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) && 
     $nome = addslashes($_POST['nome']);
     $senha = addslashes($_POST['senha']);
 
-    if($u -> login($nome, $senha) == true) {
-        if(isset($_SESSION['userID'])) {
+    if ($u->login($nome, $senha) == true) {
+        // Verifica se o usuário pertence à turma "professor" (id_turma: 4)
+        if ($u->isProfessor($nome)) {
+            header("Location: ../../PROFESSOR/index/index.html");
+        } else {
             header("Location: ../../CADASTRADO/index/index.php");
-            exit(); // Adicione esta linha para evitar que o código continue executando após o redirecionamento.
         }
+        exit();
     }
 }
 
 header("Location: login.html");
-exit(); // Adicione esta linha para evitar que o código continue executando após o redirecionamento.
-
+exit();
 ?>

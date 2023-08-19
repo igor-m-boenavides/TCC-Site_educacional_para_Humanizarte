@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
-    <link rel="stylesheet" href=turmas.css>
+    <link rel="stylesheet" href="turmas.css">
     
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -53,6 +53,32 @@
 
 <!-- FIM BARRA DE NAVEGAÇÃO -->
 
+<!-- Botão Fixo do Carrinho -->
+<button id="acessar-carrinho" class="btn btn-primary btn-carrinho">
+  <i class="bi bi-cart"></i> Carrinho
+</button>
+
+<!-- Modal do Carrinho -->
+<div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="carrinhoModalLabel">Carrinho de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Aqui você pode exibir os itens do carrinho, por exemplo: -->
+        <p>Itens do carrinho:</p>
+        <ul id="carrinhoItens"></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button id="finalizarCompraBtn" type="button" class="btn btn-primary">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CURSOS -->
 
 <div class="cursos">
@@ -69,9 +95,8 @@
       <li>Maecenas suscipit sit amet turpis eget accumsan. Proin nisl lectus, semper tincidunt sagittis eget, scelerisque volutpat purus. Suspendisse potenti. Duis iaculis id sapien in</li>
     </ul>
     </div>
-    <div class="imagem"><button class="btn btn-danger" type="button">COMPRAR</button>
+    <div class="imagem"><button id="comprar-logos" class="btn btn-danger" type="button">COMPRAR</button></div>
     </div>
-  </div>
 
   <div class="logos">
     <div class="texto">
@@ -85,9 +110,8 @@
       <li>Maecenas suscipit sit amet turpis eget accumsan. Proin nisl lectus, semper tincidunt sagittis eget, scelerisque volutpat purus. Suspendisse potenti. Duis iaculis id sapien in</li>
     </ul>
     </div>
-    <div class="imagem"><button class="btn btn-danger" type="button">COMPRAR</button>
+    <div class="imagem"><button id="comprar-cronos" class="btn btn-danger" type="button">COMPRAR</button></div>
     </div>
-  </div>
 
   <div class="logos">
     <div class="texto">
@@ -101,11 +125,9 @@
       <li>Maecenas suscipit sit amet turpis eget accumsan. Proin nisl lectus, semper tincidunt sagittis eget, scelerisque volutpat purus. Suspendisse potenti. Duis iaculis id sapien in</li>
     </ul>
     </div>
-    <div class="imagem"><button class="btn btn-danger" type="button">COMPRAR</button>
+    <div class="imagem"><button id="comprar-suntzu" class="btn btn-danger" type="button">COMPRAR</button></div>
     </div>
   </div>
-
-</div>
 
 <!-- FIM CURSOS -->
 
@@ -128,6 +150,85 @@
 </footer>
 
 <!-- FIM RODA PÉ -->
+
+<script>
+  // Array para armazenar os cursos selecionados no carrinho
+  const carrinho = [];
+
+  // Função para adicionar o curso ao carrinho
+  function adicionarAoCarrinho(curso) {
+    carrinho.push(curso);
+    alert(`Curso ${curso} adicionado ao carrinho!`);
+  }
+
+  // Obtém os botões "COMPRAR" por seus IDs e adiciona os ouvintes de clique
+  document.getElementById("comprar-logos").addEventListener("click", function () {
+    adicionarAoCarrinho("Logos");
+  });
+
+  document.getElementById("comprar-cronos").addEventListener("click", function () {
+    adicionarAoCarrinho("Cronos");
+  });
+
+  document.getElementById("comprar-suntzu").addEventListener("click", function () {
+    adicionarAoCarrinho("Sun Tzu");
+  });
+
+  // Função para exibir o carrinho
+  function exibirCarrinho() {
+    if (carrinho.length === 0) {
+      alert("Seu carrinho está vazio!");
+    } else {
+      alert("Cursos no carrinho: " + carrinho.join(", "));
+    }
+  }
+
+  // Obtém o botão fixo do carrinho por seu ID e adiciona um ouvinte de clique
+    document.getElementById("acessar-carrinho").addEventListener("click", function () {
+    exibirCarrinhoModal();
+  });
+
+  // Obtém o botão "Finalizar Compra" por seu ID e adiciona um ouvinte de clique
+  document.getElementById("finalizarCompraBtn").addEventListener("click", function () {
+    finalizarCompra();
+  });
+
+  // Função para exibir a modal do carrinho
+  function exibirCarrinhoModal() {
+    const carrinhoItensList = document.getElementById("carrinhoItens");
+    carrinhoItensList.innerHTML = ""; // Limpa a lista antes de exibir
+
+    if (carrinho.length === 0) {
+      carrinhoItensList.innerHTML = "<li>Seu carrinho está vazio!</li>";
+    } else {
+      carrinho.forEach((curso) => {
+        const item = document.createElement("li");
+        item.textContent = curso;
+        carrinhoItensList.appendChild(item);
+      });
+    }
+
+    // Exibe a modal
+    const carrinhoModal = new bootstrap.Modal(document.getElementById("carrinhoModal"));
+    carrinhoModal.show();
+  }
+
+  // Obtém o botão "Finalizar Compra" por seu ID e adiciona um ouvinte de clique
+  document.getElementById("finalizarCompraBtn").addEventListener("click", function () {
+    finalizarCompra();
+  });
+
+  // Função para simular a finalização da compra e direcionar para a página de compra
+  function finalizarCompra() {
+    if (carrinho.length === 0) {
+      alert("Seu carrinho está vazio. Adicione cursos antes de finalizar a compra.");
+    } else {
+      // Monta a URL da página de compra com os itens do carrinho como parâmetros
+      const checkoutURL = `compra.php?cursos=${encodeURIComponent(carrinho.join(','))}`;
+      window.location.href = checkoutURL;
+    }
+  }
+</script>
 
 </body>
 </html>

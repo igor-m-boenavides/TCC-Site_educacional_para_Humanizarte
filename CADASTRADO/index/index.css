@@ -280,13 +280,13 @@ border-radius: 5px;
 /* CARROSEL */
 
 .carousel {
-  max-width: 600px !important; /* Adjust the maximum width as needed */
+  max-width: 400px !important; /* Adjust the maximum width as needed */
   max-height: 600px !important; /* Adjust the maximum height as needed */
   margin: 0 auto !important; /* Center the carousel horizontally */
 }
 
 .carousel-inner img {
-  max-width: 600px !important; /* Adjust the maximum width as needed */
+  max-width: 400px !important; /* Adjust the maximum width as needed */
   max-height: 600px !important; /* Adjust the maximum height as needed */
   margin: 0 auto !important; /* Center the carousel horizontally */
   width: 100% !important;

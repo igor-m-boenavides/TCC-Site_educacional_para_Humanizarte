@@ -68,3 +68,16 @@ CREATE TABLE IF NOT EXISTS aula_turma (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS pedidos;
+CREATE TABLE IF NOT EXISTS pedidos (
+    id_pedido INT NOT NULL AUTO_INCREMENT,
+    id_aluno INT NOT NULL,
+    data_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    cursos TEXT NOT NULL,
+    PRIMARY KEY (id_pedido),
+    FOREIGN KEY (id_aluno)
+        REFERENCES aluno (id_aluno)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB;

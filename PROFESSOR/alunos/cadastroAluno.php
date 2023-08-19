@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['telefone'];
     $password = $_POST['senha'];
-    $turmas = isset($_POST['turma']) ? $_POST['turma'] : []; // Alteração aqui
+    $turmas = isset($_POST['turma']) ? $_POST['turma'] : [];
 
     try {
         // Insere os dados do aluno na tabela 'aluno'
@@ -40,6 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->bindParam(':id_aluno', $alunoId);
                 $stmt->bindParam(':id_turma', $turma);
                 $stmt->execute();
+            }
+
+            // Verifica se o usuário pertence à turma "professor" (id_turma: 4)
+            if (in_array(4, $turmas)) {
+                header("Location: ../index/index.html");
+                exit();
             }
         }
 

@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<?php
+<?
 
 require_once '../conn/conn.php';
 

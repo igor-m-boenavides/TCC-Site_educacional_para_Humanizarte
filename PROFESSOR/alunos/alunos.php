@@ -34,13 +34,13 @@
 
     <ul class="navbar-nav">
       <li class="nav-item active">
+        <a class="nav-link" href="../suas turmas/turmas.html">Início</a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="../suas turmas/turmas.html">Suas turmas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="alunos.html" id="atual">Alunos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../estatisticas/stats.html">Estatísticas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../conta/conta.html">Conta</a>
@@ -136,6 +136,26 @@ try {
 <!-- FIM ALUNOS -->
 
 </div>
+
+<!-- RODA PÉ -->
+
+<footer>
+
+  <div class="roda-pe">
+    <div class="contato">
+      <i class="bi bi-instagram" id="ig-icon"></i>
+      <i class="bi bi-facebook" id="fb-icon"></i>
+      <i class="bi bi-youtube" id="yt-icon"></i>
+    </div>
+    <img src="imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
+    <h1>Humanizarte</h1>
+    <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
+    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black">Política de Privacidade</a> | <a href="#"  style="color:black">Política de Segurança</a></p>
+  </div>
+
+</footer>
+
+<!-- FIM RODA PÉ -->
 
 </body>
 </html>

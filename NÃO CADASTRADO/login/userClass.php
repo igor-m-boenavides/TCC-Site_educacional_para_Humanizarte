@@ -21,6 +21,19 @@ class aluno {
             return false;
         }
     }
+
+    public function isProfessor($nome) {
+        require 'conn.php';
+
+        $sql = "SELECT COUNT(*) FROM aluno_turma WHERE id_aluno = :id_aluno AND id_turma = 4";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":id_aluno", $_SESSION['userID']);
+        $stmt->execute();
+
+        $count = $stmt->fetchColumn();
+
+        return $count > 0;
+    }
 }
 
 ?>
