@@ -21,8 +21,10 @@ LISTA DE A FAZERES:
 ---------09. Sistema de controle de sessão---------
 
 ---------10. Sistema de alteração de dados do usuário---------
-            10.1 - CSS da página update
+            10.1 - CSS da página update!!!!!!!!!
 
 ---------11. Estudar sistema de incorporamento de vídeos (Vimeo)---------
 
 12. Artigo
+
+13. Ínicio para Início

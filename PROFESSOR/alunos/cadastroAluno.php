@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         echo "Cadastro realizado com sucesso!";
+        header("Location: ../alunos/alunos.php");
     } catch (PDOException $e) {
         echo "Erro ao cadastrar aluno: " . $e->getMessage();
     }
