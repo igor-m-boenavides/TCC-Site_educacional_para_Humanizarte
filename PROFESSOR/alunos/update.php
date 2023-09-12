@@ -1,12 +1,16 @@
 <?php
 if (isset($_GET['id'])) {
-    $user_id = $_GET['id'];
+    $user_id = intval($_GET['id']);
 } else {
     echo "ID do usuário não fornecido.";
     // ou redirecionar para a página de listagem, por exemplo:
     // header("Location: alunos.php");
     // exit();
 }
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 ?>
 
 <!DOCTYPE html>
@@ -30,63 +34,59 @@ if (isset($_GET['id'])) {
 <body>
 
 <?php
+// Função para conectar ao banco de dados
+function conectarBanco() {
     $host = 'localhost';
     $db = 'humanizarte';
     $user = 'root';
     $password = '';
 
     try {
-        // Connect to the database
         $dsn = "mysql:host=$host;dbname=$db";
         $pdo = new PDO($dsn, $user, $password);
-
-        // Set error mode to exception
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Function to update user information
-        function updateUserInfo($user_id, $novo_nome, $novo_email, $novo_telefone, $nova_senha) {
-            global $pdo;
-
-            // Prepare the update statement
-            $stmt = $pdo->prepare("UPDATE humanizarte.aluno SET nome = COALESCE(?, nome), email = COALESCE(?, email), telefone = COALESCE(?, telefone), senha = COALESCE(?, senha) WHERE id_aluno = ?");
-
-            // Bind parameters
-            $stmt->bindParam(1, $novo_nome);
-            $stmt->bindParam(2, $novo_email);
-            $stmt->bindParam(3, $novo_telefone);
-            $stmt->bindParam(4, $nova_senha);
-            $stmt->bindParam(5, $user_id);
-
-            // Execute the update statement
-            $stmt->execute();
-
-            // Check if any rows were affected
-            if ($stmt->rowCount() > 0) {
-                echo "User information updated successfully.";
-            } else {
-                echo "No rows were updated.";
-            }
-        }
-
-        if (isset($_POST['submit'])) {
-            // Get form data
-            $novo_nome = $_POST['novo_nome'];
-            $novo_email = $_POST['novo_email'];
-            $novo_telefone = $_POST['novo_telefone'];
-            $nova_senha = $_POST['nova_senha'];
-
-            // Call the update function with non-empty fields only
-            updateUserInfo($user_id, !empty($novo_nome) ? $novo_nome : null, !empty($novo_email) ? $novo_email : null, !empty($novo_telefone) ? $novo_telefone : null, !empty($nova_senha) ? $nova_senha : null);
-        }
+        return $pdo;
     } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+        die("Erro de conexão: " . $e->getMessage());
     }
+}
+
+if (isset($_GET['id'])) {
+    $user_id = intval($_GET['id']);
+} else {
+    echo "ID do usuário não fornecido.";
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $pdo = conectarBanco();
+    
+    $novo_nome = $_POST['novo_nome'];
+    $novo_email = $_POST['novo_email'];
+    $novo_telefone = $_POST['novo_telefone'];
+    $nova_senha = $_POST['nova_senha'];
+    
+    // Valide os dados aqui conforme necessário
+    
+    // Atualize as informações do usuário
+    $stmt = $pdo->prepare("UPDATE aluno SET nome = COALESCE(?, nome), email = COALESCE(?, email), telefone = COALESCE(?, telefone), senha = COALESCE(?, senha) WHERE id_aluno = ?");
+    $stmt->execute([$novo_nome, $novo_email, $novo_telefone, $nova_senha, $user_id]);
+    
+    if ($stmt->rowCount() > 0) {
+        echo "Informações do usuário atualizadas com sucesso.";
+    } else {
+        echo "Nenhuma linha foi atualizada.";
+    }
+}
     ?>
 
-<div class="area">
+<!-- <div class="area">
     <div class="alterar">
         <div class="titulo">
             <h1>Alterar</h1>
+        </div>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo da Humanizarte" width="20%" height="20%">
         </div>
         <form method="post" action="">
             
@@ -108,11 +108,11 @@ if (isset($_GET['id'])) {
             <button type="submit" class="btn btn-primary">ALTERAR</button>
         </form>
     </div>
-</div>
+</div> -->
 
 <!--  -->
 
-<!-- <div class="login">
+<div class="login">
     <div class="entrar">
         <h2><b>Alterar</b></h2>
     </div>
@@ -120,24 +120,24 @@ if (isset($_GET['id'])) {
         <img src="imagens/logo.png" alt="Logo da Humanizarte" width="20%" height="20%">
     </div>
     <form action="" method="POST">
-    <div class="form-group">
+        <div class="form-group">
             <label for="id">ID do usuário</label>
             <input type="text" class="form-control" name="user_id" id="id" placeholder="&#xf007; ID do usuário" style="font-family:Arial, FontAwesome" value="<?php echo $user_id; ?>">
         </div>
         <div class="form-group">
-            <label for="nome">Novo nome</label>
+            <label for="novo_nome">Novo nome</label>
             <input type="text" class="form-control" name="novo_nome" id="novo_nome" placeholder="&#xf007; Digite o novo nome de usuário" style="font-family:Arial, FontAwesome">
         </div>
         <div class="form-group">
-            <label for="email">Novo email</label>
+            <label for="novo_email">Novo email</label>
             <input type="email" class="form-control" name="novo_email" id="novo_email" placeholder="&#xf0e0; Digite o novo email do usuário" style="font-family:Arial, FontAwesome">
         </div>
         <div class="form-group">
-            <label for="telefone">Telefone</label>
+            <label for="novo_telefone">Telefone</label>
             <input type="text" class="form-control" name="novo_telefone" id="novo_telefone" placeholder="&#xf095; Digite o novo telefone do usuário" style="font-family:Arial, FontAwesome">
         </div>
         <div class="form-group">
-            <label for="senha">Senha</label>
+            <label for="nova_senha">Senha</label>
             <input type="password" class="form-control" name="nova_senha" id="nova_senha" placeholder="&#xf023; Digite a nova senha do usuário" style="font-family:Arial, FontAwesome">
         </div>
         <div class="form-check">
@@ -146,7 +146,7 @@ if (isset($_GET['id'])) {
         </div>
         </div>
     </form>
-</div> -->
+</div>
 
 </body>
 </html>
