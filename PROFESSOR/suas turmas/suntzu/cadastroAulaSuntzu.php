@@ -28,13 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     move_uploaded_file($_FILES['url_anexo']['tmp_name'], $caminho_anexo);
 
     // Inserir os dados na tabela "aula"
-    $stmt = $pdo->prepare('INSERT INTO aula (nome, descricao, url_video, nome_video, url_anexo, nome_anexo) VALUES (:nome, :descricao, :url_video, :nome_anexo, :url_anexo, :nome_anexo)');
+    $stmt = $pdo->prepare('INSERT INTO aula (nome, descricao, url_video, nome_video, url_anexo, nome_anexo) VALUES (:nome, :descricao, :url_video, :nome_video, :url_anexo, :nome_anexo)');
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':descricao', $descricao);
     $stmt->bindParam(':url_video', $url_video);
-    $stmt->bindParam(':nome_video', $nome_video);
+    $stmt->bindParam(':nome_video', $nome_video); // Corrected parameter name
     $stmt->bindParam(':url_anexo', $caminho_anexo);
-    $stmt->bindParam(':nome_anexo', $nome_anexo);
+    $stmt->bindParam(':nome_anexo', $nome_anexo); // Corrected parameter name
     $stmt->execute();
 
     $id_aula = $pdo->lastInsertId(); // Obter o ID da última aula inserida
@@ -48,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':id_turma', $id_turma);
     $stmt->execute();
 
-    echo 'Aula cadastrada com sucesso!';
+    // redirecione para a página "suntzu.php"
+    header('Location: suntzu.php');
+    exit;
 }
 ?>

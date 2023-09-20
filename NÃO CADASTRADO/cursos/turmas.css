@@ -118,14 +118,22 @@ font-family: Roboto;
   margin-left: 4%;
 }
 
+.cursos h3 {
+  font-weight: bold;
+  margin-left: 50%;
+}
+
 /* :LOGOS */
 
-.cursos .logos {
+.logos {
   background-color: #f8f8f8;
   margin-left: 7%;
   margin-right: 7%;
   margin-bottom: 5%;
   display: flex;
+  max-width: 1200px;
+  min-width: 1200px;
+  width: 1200px;
 }
 
 .logos .texto {
@@ -134,7 +142,10 @@ font-family: Roboto;
 
 .logos .imagem {
   width: 400px;
-  background: url(imagens/1.jpg);
+  max-width: 400px;
+  min-width: 400px;
+  background: url(imagens/pensador.png) no-repeat;
+  background-size: cover; /* Adicione esta linha para ajustar a imagem */
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -144,11 +155,11 @@ font-family: Roboto;
 .logos .imagem button {
   background: #E90303;
   border-radius: 2px;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 600;
   font-size: 15pt;
-  margin-top: 400px;
+  margin-top: 460px;
 }
 
 .logos .texto li {
@@ -159,14 +170,19 @@ font-family: Roboto;
   padding-bottom: 1%;
 }
 
+/* :FIM LOGOS */
+
 /* :CRONOS */
 
-.cursos .cronos {
+.cronos {
   background-color: #f8f8f8;
   margin-left: 7%;
   margin-right: 7%;
-  margin: 5%;
+  margin-bottom: 5%;
   display: flex;
+  max-width: 1200px;
+  min-width: 1200px;
+  width: 1200px;
 }
 
 .cronos .texto {
@@ -175,7 +191,10 @@ font-family: Roboto;
 
 .cronos .imagem {
   width: 400px;
-  background: url(imagens/1.jpg);
+  max-width: 400px;
+  min-width: 400px;
+  background: url(imagens/ampulheta.png);
+  background-size: cover; /* Adicione esta linha para ajustar a imagem */
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -185,11 +204,11 @@ font-family: Roboto;
 .cronos .imagem button {
   background: #E90303;
   border-radius: 2px;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 600;
   font-size: 15pt;
-  margin-top: 400px;
+  margin-top: 380px;
 }
 
 .cronos .texto li {
@@ -200,13 +219,19 @@ font-family: Roboto;
   padding-bottom: 1%;
 }
 
-/* :SUNTZU */
+/* :FIM CRONOS */
 
-.cursos .suntzu {
+/* :SUN TZU */
+
+.suntzu {
   background-color: #f8f8f8;
   margin-left: 7%;
   margin-right: 7%;
+  margin-bottom: 5%;
   display: flex;
+  max-width: 1200px;
+  min-width: 1200px;
+  width: 1200px;
 }
 
 .suntzu .texto {
@@ -215,7 +240,10 @@ font-family: Roboto;
 
 .suntzu .imagem {
   width: 400px;
-  background: url(imagens/1.jpg);
+  max-width: 400px;
+  min-width: 400px;
+  background: url(imagens/suntzu.png);
+  background-size: cover; /* Adicione esta linha para ajustar a imagem */
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -225,11 +253,11 @@ font-family: Roboto;
 .suntzu .imagem button {
   background: #E90303;
   border-radius: 2px;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 600;
   font-size: 15pt;
-  margin-top: 400px;
+  margin-top: 460px;
 }
 
 .suntzu .texto li {
@@ -239,3 +267,20 @@ font-family: Roboto;
 .suntzu .texto li:not(:last-child) {
   padding-bottom: 1%;
 }
+
+/* :FIM LOGOS */
+
+/* CARRINHO */
+
+.carrinho {
+  float: right;
+  margin-right: 7%;
+  margin-top: 2%;
+}
+
+.carrinho button {
+  background-color: #14110f;
+  border: 0;
+}
+
+/* FIM CARRINHO */

@@ -1,13 +1,13 @@
 /* GERAL */
 
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-background: #F8B134 !important;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    background: #F8B134 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 /* FIM GERAL */
@@ -15,48 +15,48 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* BARRA DE NAVEGAÇÃO */
 
 .navbar {
-  background-color: whitesmoke;
-  margin: 1%;
-  border-radius: 100px !important;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: whitesmoke;
+    margin: 1%;
+    border-radius: 100px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 900px; /* Adjusted */
-  display: flex;
-  align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 900px; /* Adjusted */
+    display: flex;
+    align-items: center;
 }
 
 .navbar-logo img {
-  margin-right: 1%;
+    margin-right: 1%;
 }
 
 .lista-menu .menu-items {
-  margin-top: 5%;
-  font-size: 11.5pt;
-  font-weight: bold;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin-left: auto; /* Added */
+    margin-top: 5%;
+    font-size: 11.5pt;
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-left: auto; /* Added */
 }
 
 .lista-menu .menu-items li {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .lista-menu .menu-items li a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 #atual {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 /* FIM BARRA DE NAVEGAÇÃO */
@@ -64,106 +64,105 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* RODA PÉ */
 
 .rodape {
-  background-color: whitesmoke;
-  text-align: center;
-  margin-top: 2%;
-  font-size: 10pt;
-  margin-bottom: -2%;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 10pt;
+    margin-bottom: -2%;
 }
 
 .roda-pe h1 {
-  font-size: 17pt;
-  font-weight: 600;
-  margin-top: 1%;
-  margin-bottom: 1%;
+    font-size: 17pt;
+    font-weight: 600;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-  
+
 .roda-pe #logo-roda-pe {
-  width: 50px;
-  height: 50px;
-  margin-top: 1%;
-  margin-right: -13%;
+    width: 50px;
+    height: 50px;
+    margin-top: 1%;
+    margin-right: -13%;
 }
-  
+
 .roda-pe #copyright {
-  color: lightgray;
-  font-weight: 500;
-  margin-top: 0;
+    color: lightgray;
+    font-weight: 500;
+    margin-top: 0;
 }
-  
+
 .roda-pe .contato {
-  float: right;
-  margin: 1%;
-  margin-right: 5%;
-  color: lightgray;
-  font-size: 20pt;
+    float: right;
+    margin: 1% 5% 1% 1%;
+    color: lightgray;
+    font-size: 20pt;
 }
-  
+
 .roda-pe .contato #ig-icon #fb-icon #yt-icon {
-  padding: 10px;
+    padding: 10px;
 }
-  
+
 /* FIM RODA PÉ */
-  
+
 /* CURSOS */
 
 .area-turmas {
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .titulo {
-  margin-left: 7%;
-  font-weight: bold;
-  font-size: 40pt;
-  margin-top: 3%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-  color: black;
+    margin-left: 7%;
+    font-weight: bold;
+    font-size: 40pt;
+    margin-top: 3%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
 }
 
 /* :LOGOS */
 
 .logos {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
 .logos #logos-icone {
-  font-size: 60pt;
-  color: #E34234;
+    font-size: 60pt;
+    color: #E34234;
 }
 
 .logos-entrar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
 }
 
 .logos-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .logos h1 {
-  font-size: 22pt;
-  font-weight: 600;
-  margin-top: -10%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-  color: black;
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
 }
 
 /* :FIM LOGOS */
@@ -171,44 +170,44 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* :CRONOS */
 
 .cronos {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
 .cronos #cronos-icone {
-  font-size: 60pt;
-  color: #0FA3B1;
+    font-size: 60pt;
+    color: #0FA3B1;
 }
 
 .cronos-entrar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
 }
 
 .cronos-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cronos h1 {
-  font-size: 22pt;
-  font-weight: 600;
-  margin-top: -10%;
-  color: black;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    color: black;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
 }
 
 /* :FIM CRONOS */
@@ -216,44 +215,44 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 /* :SUNTZU */
 
 .suntzu {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  margin: 5%;
-  width: 170px;
-  height: 200px;
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 5%;
+    width: 170px;
+    height: 200px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
 .suntzu #suntzu-icone {
-  font-size: 60pt;
-  color: #7AC74F;
+    font-size: 60pt;
+    color: #7AC74F;
 }
 
 .suntzu-entrar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #14110F;
-  color: whitesmoke;
-  padding: 4%;
-  border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #14110F;
+    color: whitesmoke;
+    padding: 4%;
+    border-radius: 0 0 10px 10px;
 }
 
 .suntzu-entrar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .suntzu h1 {
-  font-size: 22pt;
-  font-weight: 600;
-  margin-top: -10%;
-  text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
-  color: black;
+    font-size: 22pt;
+    font-weight: 600;
+    margin-top: -10%;
+    text-shadow: rgba(49, 48, 48, 0.692) 2px 2px 4px;
+    color: black;
 }
 
 /* :FIM SUN TZU */

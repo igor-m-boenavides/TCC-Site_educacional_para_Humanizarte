@@ -1,0 +1,54 @@
+/* GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F8B134 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* FIM GERAL */
+
+/* FORMULÁRIO */
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1%;
+    text-align: center;
+}
+
+.form form label {
+    font-weight: bold;
+}
+
+.form form input[type=text] {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    background-color: whitesmoke;
+}
+
+.form form input[type=text]:focus {
+    border: none;
+    border-bottom: 2px solid black;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: whitesmoke;
+}
+
+.form form {
+    text-align: left;
+}
+
+/* FIM FORMULÁRIO */

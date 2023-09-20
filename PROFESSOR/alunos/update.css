@@ -11,33 +11,6 @@ body {
 
 /* FIM GERAL */
 
-/* ALTERAR */
-
-/* .area {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titulo {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.alterar {
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
-} */
-
-/* FIM ALTERAR */
-
 .login {
     width: 30%;
     height: 20%;

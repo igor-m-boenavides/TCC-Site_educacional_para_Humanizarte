@@ -66,7 +66,7 @@ if ($userID) {
       <li><a href="../index/index.php">Ínicio</a></li>
       <li id="atual"><a href="../suas turmas/turmas.php">Suas turmas</a></li>
       <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
-      <li><a href="../conta/conta.html">Conta</a></li>
+      <li><a href="../conta/conta.php">Conta</a></li>
     </ul>
   </nav>
 </div>

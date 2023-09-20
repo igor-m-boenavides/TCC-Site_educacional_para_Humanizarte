@@ -49,7 +49,7 @@ require_once '../conn/conn.php';
       <li id="atual"><a href="../index/index.php">Ínicio</a></li>
       <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
       <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
-      <li><a href="../conta/conta.html">Conta</a></li>
+      <li><a href="../conta/conta.php">Conta</a></li>
     </ul>
   </nav>
 </div>
@@ -69,26 +69,20 @@ require_once '../conn/conn.php';
   <!-- Slides -->
   <div class="carousel-inner">
       <div class="item active">
-          <img src="imagens/imagem1.jpg" alt="Image 1">
+          <a href="https://www.youtube.com/@HumanizArteProfDionathas" target="_blank"><img src="imagens/1.png" alt="Image 1"></a>
           <div class="carousel-caption">
-              <!-- <h3>Image 1</h3> -->
-              <!-- <p>Description for Image 1</p> -->
           </div>
       </div>
 
       <div class="item">
-          <img src="imagens/imagem2.jpg" alt="Image 2">
+          <a href="https://www.instagram.com/humanizarteoficial/" target="_blank"><img src="imagens/2.png" alt="Image 2"></a>
           <div class="carousel-caption">
-              <!-- <h3>Image 2</h3> -->
-              <!-- <p>Description for Image 2</p> -->
           </div>
       </div>
 
       <div class="item">
-          <img src="imagens/imagem3.jpg" alt="Image 3">
+          <a href="https://wa.me/message/KVTNXX6M3XKYC1" target="_blank"><img src="imagens/3.png" alt="Image 3"></a>
           <div class="carousel-caption">
-              <!-- <h3>Image 3</h3> -->
-              <!-- <p>Description for Image 3</p> -->
           </div>
       </div>
   </div>
@@ -113,12 +107,10 @@ require_once '../conn/conn.php';
 
     <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-logos">LOGOS</h1></h1>
     <span class="logos-cntd">
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
+      <p>Filosofia e Sociologia</p>
+      <p>Foco ENEM e Vestibulares</p>
+      <p>Material completo de conteúdo e questões</p>
+      <p>Modalidades online ao vivo e presencial</p>
       <button type="button" class="btn btn-danger" id="comprar-btn">COMPRAR</button>
     </span>
 
@@ -127,12 +119,10 @@ require_once '../conn/conn.php';
   <div class="cartao-cronos">
     <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-cronos" id="comprar-btn">CRONOS</h1></h1>
     <span class="cronos-cntd">
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
+      <p>História Geral e do Brasil</p>
+      <p>Foco ENEM e Vestibulares</p>
+      <p>Material completo de conteúdo e questões</p>
+      <p>Modalidades online ao vivo e presencial</p>
       <button type="button" class="btn btn-danger" id="comprar-btn">COMPRAR</button>
     </span>
 
@@ -141,12 +131,10 @@ require_once '../conn/conn.php';
   <div class="cartao-suntzu">
     <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-suntzu">SUNTZU</h1></h1>
     <span class="suntzu-cntd">
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
-      <p>Aulas de Filosofia</p>
+      <p>Estratégia e Prática ENEM</p>
+      <p>Aulas ao vivo a partir de junho</p>
+      <p>Formação sobre Habilidades e Competências ENEM</p>
+      <p>Material completo de conteúdo e questões</p>
       <button type="button" class="btn btn-danger" id="comprar-btn">COMPRAR</button>
     </span>
   </div>

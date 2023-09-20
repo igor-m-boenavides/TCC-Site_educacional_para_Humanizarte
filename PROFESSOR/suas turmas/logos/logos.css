@@ -121,6 +121,10 @@ details > summary {
   cursor: pointer;
 }
 
+details {
+  margin-bottom: 1%;
+}
+
 details > p {
   background-color: #F8B134;
   padding: 1%;
@@ -131,6 +135,5 @@ details > p {
 .aula {
   margin: 1%;
 }
-
 
 /* FIM AULAS */

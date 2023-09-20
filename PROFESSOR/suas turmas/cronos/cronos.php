@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
     <link rel="stylesheet" href="cronos.css">
+    <link rel="icon" href="../imagens/logo.png">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -26,7 +27,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
 
-  <a class="navbar-brand" href="#" id="logo_texto"><img alt="Logo Humanizarte" src="../imagens/logo.png" width="40" height="40">Humanizarte</a>
+  <a class="navbar-brand" href="../turmas.html" id="logo_texto"><img alt="Logo Humanizarte" src="../imagens/logo.png" width="40" height="40">Humanizarte</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,17 +35,17 @@
   <div class="collapse navbar-collapse" id="navbarNav">
 
     <ul class="navbar-nav">
-      <li class="nav-item active" style="text-decoration: underline;">
-        <a class="nav-link" href="#">Suas turmas</a>
+      <li class="nav-item"">
+        <a class="nav-link" href="../../index/index.html">Ínicio</span></a>
+      </li>
+      <li class="nav-item" style="text-decoration: underline;">
+        <a class="nav-link" href="../turmas.html">Turmas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Alunos</a>
+        <a class="nav-link" href="../../alunos/alunos.php">Alunos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Estatísticas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Conta</a>
+        <a class="nav-link" href="../../conta/conta.php">Conta</a>
       </li>
     </ul>
 
@@ -75,7 +76,7 @@
 <!-- LISTA DE AULAS -->
 
 <div class="aula">
-  <?php
+<?php
   // Conectar ao banco de dados
   $host = 'localhost';
   $db = 'humanizarte';
@@ -83,24 +84,32 @@
   $password = '';
 
   try {
-      $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      // Consultar as aulas da turma "Cronos" (id_turma = 2)
-      $stmt = $pdo->prepare('SELECT a.nome, a.url_video, a.nome_video, a.url_anexo, a.nome_anexo FROM aula a INNER JOIN aula_turma at ON a.id_aula = at.id_aula WHERE at.id_turma = 2');
-      $stmt->execute();
-      $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Consultar as aulas da turma "Cronos" (id_turma = 2)
+    $stmt = $pdo->prepare('SELECT a.id_aula, a.nome, a.url_video, a.nome_video, a.url_anexo, a.nome_anexo FROM aula a INNER JOIN aula_turma at ON a.id_aula = at.id_aula WHERE at.id_turma = 2');
+    $stmt->execute();
+    $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-      foreach ($aulas as $aula) {
-          echo '<details>';
-          echo '<summary style="color: black;">' . $aula['nome'] . '</summary>';
-          echo '<p><a target="_blank" style="color: black; text-decoration: none;" href="' . $aula['url_video'] . '"> <i class="bi bi-youtube"></i> ' . $aula['nome_video'] . '</a></p>';
-          echo '<p><a style="color: black; text-decoration: none;" href="' . $aula['url_anexo'] . '" download><i class="fa fa-file-text-o"></i> ' . $aula['nome_anexo'] . '</a></p>';
-          echo '</details>';
-      }
-  } catch (PDOException $e) {
-      echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
-  }
+    foreach ($aulas as $aula) {
+        echo '<details>';
+        echo '<summary style="color: black;">' . $aula['nome'] . '</summary>';
+        echo '<p><a target="_blank" style="color: black; text-decoration: none;" href="' . $aula['url_video'] . '"> <i class="bi bi-youtube"></i> ' . $aula['nome_video'] . '</a></p>';
+        echo '<p><a style="color: black; text-decoration: none;" href="' . $aula['url_anexo'] . '" download><i class="fa fa-file-text-o"></i> ' . $aula['nome_anexo'] . '</a></p>';
+        echo '</details>';
+
+        // Adicione links de edição e exclusão
+        echo '<div class="btn-group mr-2" role="group">';
+        echo '<a href="editarAula/editarAula.php?id=' . $aula['id_aula'] . '"><i class="bi bi-pen-fill"></i></a>';
+        echo '<p><a href="excluirAula.php?id=' . $aula['id_aula'] . '"><i class="bi bi-trash-fill" style="color: red;"></i></a></p>';
+        echo '</div>';
+
+ 
+    }
+} catch (PDOException $e) {
+    echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
+}
   ?>
 </div>
 

@@ -129,7 +129,7 @@ body {
 }
   
 .area .area-sobre-nos .imagem {
-  width: 120%;
+  width: 700px;
 }
 
 /* :Sobre nós */
@@ -189,6 +189,10 @@ body {
 .nome {
   margin-top: 10px; /* Adjust spacing between image and name */
   text-align: center;
+}
+
+.sub_nome {
+  font-weight: normal;
 }
 
 /* FIM EQUIPE */

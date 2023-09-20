@@ -128,6 +128,10 @@ details > p {
   border-bottom: 2px solid #ad7b24;
 }
 
+details {
+  margin-bottom: 1%;
+}
+
 .aula {
   margin: 1%;
 }

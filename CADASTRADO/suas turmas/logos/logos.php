@@ -45,7 +45,7 @@
         <a class="nav-link" href="../../sobre-nos/sobrenos.html">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../../conta/conta.html">Conta</a>
+        <a class="nav-link" href="../../conta/conta.php">Conta</a>
       </li>
     </ul>
 

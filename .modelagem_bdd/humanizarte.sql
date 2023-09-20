@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS humanizarte;
 
-USE humanizarte;
+	USE humanizarte;
 
 DROP TABLE IF EXISTS aluno;
 CREATE TABLE IF NOT EXISTS aluno (

@@ -1,0 +1,82 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F8B134 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* FIM GERAL */
+
+/* EDITAR */
+.area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.editar-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.editar-form form input[type="text"]:focus,
+.editar-form form input[type="email"]:focus,
+.editar-form form input[type="password"]:focus {
+    border-bottom: 2px solid #14110f; /* Cor da borda quando focado */
+    outline: none; /* Remova a borda de foco padrão */
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 155px;
+    background: #14110f;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center-image {
+    text-align: center;
+}
+
+.center-image img {
+    display: block;
+    margin: 0 auto; /* Isso centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não fique maior que o contêiner */
+    height: auto;
+}
+
+
+/* FIM EDITAR */

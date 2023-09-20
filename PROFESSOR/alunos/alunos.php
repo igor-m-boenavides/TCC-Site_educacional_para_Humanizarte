@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humanizarte</title>
     <link rel="stylesheet" href="alunos.css">
+    <link rel="icon" href="../../NÃO CADASTRADO/index/imagens/logo.png">
     
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -42,7 +43,7 @@
       <li><a href="../index/index.html">Ínicio</a></li>
       <li><a href="../suas turmas/turmas.html">Turmas</a></li>
       <li id="atual"><a href="../alunos/alunos.php">Alunos</a></li>
-      <li><a href="../conta/conta.html">Conta</a></li>
+      <li><a href="../conta/conta.php">Conta</a></li>
     </ul>
   </nav>
 </div>
@@ -66,7 +67,6 @@
 <!-- INICIO LISTAGEM DE ALUNOS -->
 
 <?php
-
 $servername = 'localhost';
 $dbname = 'humanizarte';
 $username = 'root';
@@ -74,7 +74,12 @@ $password = '';
 
 $dsn = "mysql:host=$servername;dbname=$dbname"; 
 
-$sql = "SELECT * FROM aluno";
+// Consulta SQL com JOIN para obter informações da turma
+$sql = "SELECT aluno.id_aluno, aluno.nome, aluno.email, aluno.telefone, GROUP_CONCAT(turma.nome ORDER BY turma.nome ASC) AS nome_turmas
+        FROM aluno
+        LEFT JOIN aluno_turma ON aluno.id_aluno = aluno_turma.id_aluno
+        LEFT JOIN turma ON aluno_turma.id_turma = turma.id_turma
+        GROUP BY aluno.id_aluno";
 
 try {
   $pdo = new PDO($dsn, $username, $password);
@@ -86,32 +91,32 @@ try {
 } catch (PDOException $e) {
   echo $e->getMessage();
 }
-
 ?>
 
 <table class="table">
 <tbody>
 <tr>
   <th>ID</th>
-  <th>Nome de usuário</th>
+  <th>Nome de Usuário</th>
   <th>Email</th>
   <th>Telefone</th>
-  <th>Turma</th>
+  <th>Turmas</th>
   <th>Editar</th>
   <th>Excluir</th>
 </tr>
+
 <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
 <tr>
   <td><?php echo htmlspecialchars($row['id_aluno']); ?></td>
   <td><?php echo htmlspecialchars($row['nome']); ?></td>
   <td><?php echo htmlspecialchars($row['email']); ?></td>
   <td><?php echo htmlspecialchars($row['telefone']); ?></td>
-  <td>Turma</td>
+  <td><?php echo htmlspecialchars($row['nome_turmas']); ?></td> <!-- Nova coluna para as turmas -->
   <td>
     <p style="padding: 0; margin: 0;">
       <a href="update.php?id=<?php echo $row['id_aluno']; ?>" style="color: blue;">
         <i class="bi bi-pen-fill"></i>
-        </a>
+      </a>
     </p>
   </td>
   <td>
@@ -124,8 +129,10 @@ try {
   </td>
 </tr>
 <?php endwhile; ?>
+
 </tbody>
 </table>
+
 
 <!-- FIM LISTAGEM DE ALUNOS -->
 
