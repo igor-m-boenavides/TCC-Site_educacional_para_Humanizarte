@@ -22,7 +22,7 @@ try {
     // Executando a consulta
     $stmt->execute();
     
-    echo "Usuário excluído com sucesso.";
+    header('Location: alunos.php');
   }
 } catch(PDOException $e) {
   echo "Erro ao conectar-se ao banco de dados: " . $e->getMessage();

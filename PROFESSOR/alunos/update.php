@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$novo_nome, $novo_email, $novo_telefone, $nova_senha, $user_id]);
     
     if ($stmt->rowCount() > 0) {
-        echo "Informações do usuário atualizadas com sucesso.";
+        header('Location: alunos.php');
     } else {
         echo "Nenhuma linha foi atualizada.";
     }

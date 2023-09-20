@@ -16,7 +16,7 @@ try {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obter os dados do formulário
     $nome = $_POST['nome'];
-    $descricao = $_POST['descricao'];
+    // $descricao = $_POST['descricao'];
     $url_video = $_POST['url_video'];
     $nome_video = $_POST['nome_video'];
 
@@ -28,9 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     move_uploaded_file($_FILES['url_anexo']['tmp_name'], $caminho_anexo);
 
    // Inserir os dados na tabela "aula"
-    $stmt = $pdo->prepare('INSERT INTO aula (nome, descricao, url_video, nome_video, url_anexo, nome_anexo) VALUES (:nome, :descricao, :url_video, :nome_video, :url_anexo, :nome_anexo)');
+    $stmt = $pdo->prepare('INSERT INTO aula (nome, url_video, nome_video, url_anexo, nome_anexo) VALUES (:nome, :url_video, :nome_video, :url_anexo, :nome_anexo)');
     $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':descricao', $descricao);
     $stmt->bindParam(':url_video', $url_video);
     $stmt->bindParam(':nome_video', $nome_video); // Corrected parameter name
     $stmt->bindParam(':url_anexo', $caminho_anexo);

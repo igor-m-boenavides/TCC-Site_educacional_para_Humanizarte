@@ -132,6 +132,8 @@ position: absolute;
 top: 20%;
 }
 
+/* FIM CARTÕES DE PREÇO */
+
 /* :LOGOS */
 
 .cartao-logos {
@@ -173,6 +175,8 @@ margin-left: 15px;
 margin-top: -10px;
 font-weight: 600;
 }
+
+/* :FIM LOGOS */
 
 /* :CRONOS */
 
@@ -216,6 +220,8 @@ margin-top: -10px;
 font-weight: 600;
 }
 
+/* :FIM CRONOS */
+
 /* :SUN TZU */
 
 .cartao-suntzu {
@@ -258,6 +264,8 @@ margin-top: -10px;
 font-weight: 600;
 }
 
+/* :FIM SUN TZU */
+
 /* :BOTÕES "COMPRAR" */
 
 #comprar-btn {
@@ -266,6 +274,8 @@ padding-left: 20px;
 padding-right: 20px;
 border-radius: 5px;
 }
+
+/* :FIM BOTÕES "COMPRA" */
 
 /* CARROSEL */
 
