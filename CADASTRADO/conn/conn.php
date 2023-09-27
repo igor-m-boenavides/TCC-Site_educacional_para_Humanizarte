@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $localhost = "localhost";
@@ -10,14 +9,14 @@ $banco = "humanizarte";
 global $pdo;
 
 try {
-    $pdo = new PDO("mysql:host=$localhost; dbname=$banco; charset=utf8", $user, $pass);
+    $pdo = new PDO("mysql:host=$localhost;dbname=$banco;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Configura o PDO para lançar exceções em caso de erros
 } catch (PDOException $e) {
-    echo "Erro de conexão: " . $e->getMessage();
+    die("Erro de conexão: " . $e->getMessage()); // Trate erros de conexão adequadamente
 }
 
 // Acessar o ID do usuário
 $userID = isset($_SESSION['userID']) ? $_SESSION['userID'] : null;
 
 // Utilize o $userID conforme necessário
-
 ?>

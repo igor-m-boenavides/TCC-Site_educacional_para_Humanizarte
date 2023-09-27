@@ -34,49 +34,41 @@ ini_set('display_errors', '1');
 <body>
 
 <?php
-// Função para conectar ao banco de dados
-function conectarBanco() {
-    $host = 'localhost';
-    $db = 'humanizarte';
-    $user = 'root';
-    $password = '';
+// Inclua a configuração do banco de dados aqui (conexão PDO)
+require_once '../conn/conn.php';
+require_once '../conn/auth.php';
 
-    try {
-        $dsn = "mysql:host=$host;dbname=$db";
-        $pdo = new PDO($dsn, $user, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $pdo;
-    } catch (PDOException $e) {
-        die("Erro de conexão: " . $e->getMessage());
-    }
-}
+// Check if session variables nome and senha are set
+if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['senha']) && !empty($_SESSION['senha'])) {
+    // These variables are now available for use
+    $nome = $_SESSION['nome'];
+    $senha = $_SESSION['senha'];
+    
+    // Verificar o papel do usuário após o login
+    if (login($nome, $senha)) {
+        $papeis = obterPapeisUsuarioAutenticado(); // Implemente esta função para obter os papéis do usuário
+        $eProfessor = in_array('professor', $papeis);
 
-if (isset($_GET['id'])) {
-    $user_id = intval($_GET['id']);
-} else {
-    echo "ID do usuário não fornecido.";
-    exit();
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $pdo = conectarBanco();
-    
-    $novo_nome = $_POST['novo_nome'];
-    $novo_email = $_POST['novo_email'];
-    $novo_telefone = $_POST['novo_telefone'];
-    $nova_senha = $_POST['nova_senha'];
-    
-    // Valide os dados aqui conforme necessário
-    
-    // Atualize as informações do usuário
-    $stmt = $pdo->prepare("UPDATE aluno SET nome = COALESCE(?, nome), email = COALESCE(?, email), telefone = COALESCE(?, telefone), senha = COALESCE(?, senha) WHERE id_aluno = ?");
-    $stmt->execute([$novo_nome, $novo_email, $novo_telefone, $nova_senha, $user_id]);
-    
-    if ($stmt->rowCount() > 0) {
-        header('Location: alunos.php');
+        if ($eProfessor) {
+            // O usuário é um professor, redirecione para a página de professor
+            header("Location: ../professor/../professor/index/index.html");
+            exit;
+        } else {
+            // O usuário não é um professor, verifique se ele pertence a outras turmas
+            if (in_array('cronos', $papeis) || in_array('logos', $papeis) || in_array('sunztu', $papeis)) {
+                // O usuário é membro de pelo menos uma das turmas Cronos, Logos ou Sun Tzu
+                header("Location: conta.php");
+                exit;
+            } else {
+                // O usuário não tem permissão para acessar outras páginas
+                // Redirecione para uma página de acesso não autorizado ou mostre uma mensagem de erro
+            }
+        }
     } else {
-        echo "Nenhuma linha foi atualizada.";
+        $erro_login = "Credenciais inválidas. Por favor, tente novamente.";
     }
+} else {
+    $erro_login = "Credenciais inválidas. Por favor, tente novamente.";
 }
     ?>
 
