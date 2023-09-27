@@ -105,7 +105,7 @@ require_once '../conn/conn.php';
 <div class="area-cartoes">
   <div class="cartao-logos">
 
-    <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-logos">LOGOS</h1></h1>
+    <h1><sup>R$</sup>300<p>/mês</p><h1 id="h1-logos">LOGOS</h1></h1>
     <span class="logos-cntd">
       <p>Filosofia e Sociologia</p>
       <p>Foco ENEM e Vestibulares</p>
@@ -117,7 +117,7 @@ require_once '../conn/conn.php';
   </div>
 
   <div class="cartao-cronos">
-    <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-cronos" id="comprar-btn">CRONOS</h1></h1>
+    <h1><sup>R$</sup>300<p>/mês</p><h1 id="h1-cronos" id="comprar-btn">CRONOS</h1></h1>
     <span class="cronos-cntd">
       <p>História Geral e do Brasil</p>
       <p>Foco ENEM e Vestibulares</p>
@@ -129,7 +129,7 @@ require_once '../conn/conn.php';
 </div>
 
   <div class="cartao-suntzu">
-    <h1><sup>R$</sup>12<p>/mês</p><h1 id="h1-suntzu">SUNTZU</h1></h1>
+    <h1><sup>R$</sup>100<p>/mês</p><h1 id="h1-suntzu">SUNTZU</h1></h1>
     <span class="suntzu-cntd">
       <p>Estratégia e Prática ENEM</p>
       <p>Aulas ao vivo a partir de junho</p>

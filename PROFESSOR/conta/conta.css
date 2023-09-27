@@ -21,22 +21,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.navbar-logo {
+  }
+  
+  .navbar-logo {
     width: 50px;
     height: 50px;
     margin-right: 900px; /* Adjusted */
     display: flex;
     align-items: center;
-}
-
-.navbar-logo img {
+  }
+  
+  .navbar-logo img {
     margin-right: 5px;
-}
-
-.lista-menu .menu-items {
+  }
+  
+  .lista-menu .menu-items {
     margin-top: 5%;
     font-size: 11.5pt;
     font-weight: bold;
@@ -44,22 +43,22 @@ body {
     list-style: none;
     padding: 0;
     margin-left: auto; /* Added */
-}
-
-.lista-menu .menu-items li {
+  }
+  
+  .lista-menu .menu-items li {
     margin-right: 10px;
-}
-
-.lista-menu .menu-items li a {
+  }
+  
+  .lista-menu .menu-items li a {
     color: black;
     text-decoration: none;
-}
-
-#atual {
+  }
+  
+  #atual {
     text-decoration: underline !important;
-}
-
-/* FIM BARRA DE NAVEGAÇÃO */
+  }
+  
+  /* FIM BARRA DE NAVEGAÇÃO */
 
 /* RODA PÉ */
 

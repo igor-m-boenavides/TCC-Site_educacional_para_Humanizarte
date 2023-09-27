@@ -72,24 +72,24 @@ try {
 
 <body>
 
-  <!-- BARRA DE NAVEGAÇÃO -->
+<!-- BARRA DE NAVEGAÇÃO -->
 
-  <div class="navbar">
-    <a class="navbar-logo" style="color: black; text-decoration: none; font-size: 15pt;">
-      <img src="../index/imagens/logo.png" width="50px" height="50px">
-      Humanizarte
-    </a>
-    <nav class="lista-menu">
-      <ul class="menu-items">
-        <li><a href="../index/index.php">Ínicio</a></li>
-        <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
-        <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
-        <li id="atual"><a href="../conta/conta.html">Conta</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="navbar">
+  <a class="navbar-logo" style="color: black; text-decoration: none; font-size: 15pt;">
+    <img src="../alunos/imagens/logo.png" width="50px" height="50px">
+    Humanizarte
+  </a>
+  <nav class="lista-menu">
+    <ul class="menu-items">
+      <li><a href="../index/index.html">Ínicio</a></li>
+      <li><a href="../suas turmas/turmas.html">Turmas</a></li>
+      <li><a href="../alunos/alunos.php">Alunos</a></li>
+      <li id="atual"><a href="../conta/conta.php">Conta</a></li>
+    </ul>
+  </nav>
+</div>
 
-  <!-- FIM DA BARRA DE NAVEGAÇÃO -->
+<!-- FIM DA BARRA DE NAVEGAÇÃO -->
 
   <!-- CONTA -->
 
