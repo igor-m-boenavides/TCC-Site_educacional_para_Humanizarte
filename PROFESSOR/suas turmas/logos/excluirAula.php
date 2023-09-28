@@ -32,8 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
 }
 
 // Inclua a configuração do banco de dados aqui (conexão PDO)
-require_once '../conn/conn.php';
-require_once '../conn/auth.php';
+include_once("../conn/conn.php");
+include_once("../conn/sessao_usuarios.php");
+include_once '../conn/auth.php';
+
+verificarSessao($pdo);
 
 // Check if session variables nome and senha are set
 if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['senha']) && !empty($_SESSION['senha'])) {

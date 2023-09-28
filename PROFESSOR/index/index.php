@@ -1,8 +1,11 @@
 <?php
 
 // Inclua a configuração do banco de dados aqui (conexão PDO)
-require_once '../conn/conn.php';
-require_once '../conn/auth.php';
+include_once("../conn/conn.php");
+include_once("../conn/sessao_usuarios.php");
+include_once '../conn/auth.php';
+
+verificarSessao($pdo);
 
 // Check if session variables nome and senha are set
 if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['senha']) && !empty($_SESSION['senha'])) {
@@ -17,7 +20,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
 
         if ($eProfessor) {
             // O usuário é um professor, redirecione para a página de professor
-            header("Location: ../professor/../professor/index/index.html");
+            header("Location: ../professor/../professor/index/index.php");
             exit;
         } else {
             // O usuário não é um professor, verifique se ele pertence a outras turmas

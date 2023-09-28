@@ -14,6 +14,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) &&
         // Set session variables for nome and senha
         $_SESSION['nome'] = $nome;
         $_SESSION['senha'] = $senha;
+        $_SESSION['logado'] = true;
 
         // Verifica se o usuário pertence à turma "professor" (id_turma: 4)
         if ($u->isProfessor($nome)) {
