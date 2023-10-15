@@ -35,13 +35,13 @@
 
 <div class="navbar">
   <a class="navbar-logo" style="color: black; text-decoration: none; font-size: 15pt;">
-    <img src="imagens/logo.png" width="50px" height="50px">
+    <img src="imagens/logo.png" href="alunos.php" width="50px" height="50px">
     Humanizarte
   </a>
   <nav class="lista-menu">
     <ul class="menu-items">
-      <li><a href="../index/index.html">Ínicio</a></li>
-      <li><a href="../suas turmas/turmas.html">Turmas</a></li>
+      <li><a href="../index/index.php">Início</a></li>
+      <li><a href="../suas turmas/turmas.php">Turmas</a></li>
       <li id="atual"><a href="../alunos/alunos.php">Alunos</a></li>
       <li><a href="../conta/conta.php">Conta</a></li>
     </ul>
@@ -108,6 +108,10 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
     $erro_login = "Credenciais inválidas. Por favor, tente novamente.";
 }
 
+$dsn = "mysql:host=$localhost;dbname=$banco;charset=utf8";
+$user = "root";
+$pass = "";
+
 // Consulta SQL com JOIN para obter informações da turma
 $sql = "SELECT aluno.id_aluno, aluno.nome, aluno.email, aluno.telefone, GROUP_CONCAT(turma.nome ORDER BY turma.nome ASC) AS nome_turmas
         FROM aluno
@@ -116,7 +120,7 @@ $sql = "SELECT aluno.id_aluno, aluno.nome, aluno.email, aluno.telefone, GROUP_CO
         GROUP BY aluno.id_aluno";
 
 try {
-  $pdo = new PDO($dsn, $username, $password);
+  $pdo = new PDO($dsn, $user, $pass);
   $stmt = $pdo->query($sql);
 
   if ($stmt === false) {
@@ -125,7 +129,37 @@ try {
 } catch (PDOException $e) {
   echo $e->getMessage();
 }
+
+$userIDLogado = isset($_SESSION['userID']) ? $_SESSION['userID'] : null;
+
+$statusFilter = isset($_GET['status']) ? $_GET['status'] : 'ativado'; // Padrão é mostrar alunos ativados
+
+$sql = "SELECT aluno.id_aluno, aluno.nome, aluno.email, aluno.telefone, GROUP_CONCAT(turma.nome ORDER BY turma.nome ASC) AS nome_turmas
+        FROM aluno
+        LEFT JOIN aluno_turma ON aluno.id_aluno = aluno_turma.id_aluno
+        LEFT JOIN turma ON aluno_turma.id_turma = turma.id_turma
+        WHERE aluno.status = :status
+        GROUP BY aluno.id_aluno";
+
+try {
+  $pdo = new PDO($dsn, $user, $pass);
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindValue(':status', $statusFilter == 'ativado' ? 1 : 0, PDO::PARAM_INT); // 1 para ativado, 0 para desativado
+  $stmt->execute();
+
+  if ($stmt === false) {
+      die("Error");
+  }
+} catch (PDOException $e) {
+  echo $e->getMessage();
+}
+
+
 ?>
+
+<div class="mudar">
+  <p><a href="alunos.php?status=ativado" style="color: black;">Mostrar Alunos Ativados</a> | <a href="alunos.php?status=desativado" style="color: black;">Mostrar Alunos Desativados</a></p>
+</div>
 
 <table class="table">
 <tbody>
@@ -145,24 +179,32 @@ try {
   <td><?php echo htmlspecialchars($row['nome']); ?></td>
   <td><?php echo htmlspecialchars($row['email']); ?></td>
   <td><?php echo htmlspecialchars($row['telefone']); ?></td>
-  <td><?php echo htmlspecialchars($row['nome_turmas']); ?></td> <!-- Nova coluna para as turmas -->
-  <td>
-    <p style="padding: 0; margin: 0;">
-      <a href="update.php?id=<?php echo $row['id_aluno']; ?>" style="color: blue;">
-        <i class="bi bi-pen-fill"></i>
-      </a>
-    </p>
-  </td>
-  <td>
-    <form method="post" action="delete.php" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');">
-      <input type="hidden" name="id_aluno" value="<?php echo $row['id_aluno']; ?>">
-      <button type="submit" name="excluir" style="border: none; background: none; color: red;">
-        <i class="bi bi-trash-fill"></i>
-      </button>
-    </form>
-  </td>
+  <td><?php echo htmlspecialchars($row['nome_turmas']); ?></td>
+
+  <!-- Verifique se o ID do usuário na lista é igual ao ID do usuário logado -->
+  <?php if ($row['id_aluno'] == $userIDLogado) : ?>
+    <td>-</td> <!-- Substitui por "-" se for o mesmo usuário -->
+    <td>-</td> <!-- Substitui por "-" se for o mesmo usuário -->
+  <?php else : ?>
+    <td>
+      <p style="padding: 0; margin: 0;">
+        <a href="update.php?id=<?php echo $row['id_aluno']; ?>" style="color: blue;">
+          <i class="bi bi-pen-fill"></i>
+        </a>
+      </p>
+    </td>
+    <td>
+      <form method="post" action="delete.php" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');">
+        <input type="hidden" name="id_aluno" value="<?php echo $row['id_aluno']; ?>">
+        <button type="submit" name="excluir" style="border: none; background: none; color: red;">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </form>
+    </td>
+  <?php endif; ?>
 </tr>
 <?php endwhile; ?>
+
 
 </tbody>
 </table>
@@ -186,7 +228,7 @@ try {
     <img src="imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
+    <!-- <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p> -->
   </div>
 </footer>
 

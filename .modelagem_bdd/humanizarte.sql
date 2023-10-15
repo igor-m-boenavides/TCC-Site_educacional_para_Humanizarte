@@ -9,15 +9,16 @@ CREATE TABLE IF NOT EXISTS aluno (
     email VARCHAR(45) NOT NULL,
     telefone VARCHAR(45) NOT NULL,
     senha VARCHAR(45) NOT NULL,
+    status ENUM('ativado', 'desativado') NOT NULL DEFAULT 'ativado',
     PRIMARY KEY (id_aluno)
-) ENGINE=InnoDB;
+)  ENGINE=INNODB;
 
 DROP TABLE IF EXISTS turma;
 CREATE TABLE IF NOT EXISTS turma (
     id_turma INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     PRIMARY KEY (id_turma)
-) ENGINE=InnoDB;
+)  ENGINE=INNODB;
 
 INSERT INTO turma (id_turma, nome) VALUES (1, 'Logos'), (2, 'Cronos'), (3, 'Sun Tzu'), (4, 'Professor');
 
@@ -27,17 +28,13 @@ CREATE TABLE IF NOT EXISTS aluno_turma (
     id_aluno INT NOT NULL,
     id_turma INT NOT NULL,
     PRIMARY KEY (id_aluno_turma),
-    CONSTRAINT fk_aluno_has_turma_aluno1
-        FOREIGN KEY (id_aluno)
+    CONSTRAINT fk_aluno_has_turma_aluno1 FOREIGN KEY (id_aluno)
         REFERENCES aluno (id_aluno)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    CONSTRAINT fk_aluno_has_turma_turma1
-        FOREIGN KEY (id_turma)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_aluno_has_turma_turma1 FOREIGN KEY (id_turma)
         REFERENCES turma (id_turma)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-) ENGINE=InnoDB;
+        ON DELETE CASCADE ON UPDATE CASCADE
+)  ENGINE=INNODB;
 
 DROP TABLE IF EXISTS aula;
 CREATE TABLE IF NOT EXISTS aula (
@@ -47,9 +44,8 @@ CREATE TABLE IF NOT EXISTS aula (
     nome_video VARCHAR(200) NOT NULL,
     url_anexo VARCHAR(200) NOT NULL,
     nome_anexo VARCHAR(200) NOT NULL,
-    descricao VARCHAR(500) NOT NULL,
     PRIMARY KEY (id_aula)
-) ENGINE=InnoDB;
+)  ENGINE=INNODB;
 
 DROP TABLE IF EXISTS aula_turma;
 CREATE TABLE IF NOT EXISTS aula_turma (
@@ -57,17 +53,13 @@ CREATE TABLE IF NOT EXISTS aula_turma (
     id_aula INT NOT NULL,
     id_turma INT NOT NULL,
     PRIMARY KEY (id_aula_turma),
-    CONSTRAINT fk_aula_has_turma_aula1
-        FOREIGN KEY (id_aula)
+    CONSTRAINT fk_aula_has_turma_aula1 FOREIGN KEY (id_aula)
         REFERENCES aula (id_aula)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    CONSTRAINT fk_aula_has_turma_turma1
-        FOREIGN KEY (id_turma)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_aula_has_turma_turma1 FOREIGN KEY (id_turma)
         REFERENCES turma (id_turma)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-) ENGINE=InnoDB;
+        ON DELETE CASCADE ON UPDATE CASCADE
+)  ENGINE=INNODB;
 
 DROP TABLE IF EXISTS pedidos;
 CREATE TABLE IF NOT EXISTS pedidos (
@@ -78,6 +70,5 @@ CREATE TABLE IF NOT EXISTS pedidos (
     PRIMARY KEY (id_pedido),
     FOREIGN KEY (id_aluno)
         REFERENCES aluno (id_aluno)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-) ENGINE=InnoDB;
+        ON DELETE CASCADE ON UPDATE CASCADE
+)  ENGINE=INNODB;

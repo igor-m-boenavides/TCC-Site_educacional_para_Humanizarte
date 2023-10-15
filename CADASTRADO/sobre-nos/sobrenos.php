@@ -84,7 +84,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
   </a>
   <nav class="lista-menu">
     <ul class="menu-items">
-      <li><a href="../index/index.php">Ínicio</a></li>
+      <li><a href="../index/index.php">Início</a></li>
       <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
       <li id="atual"><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
       <li><a href="../conta/conta.php">Conta</a></li>

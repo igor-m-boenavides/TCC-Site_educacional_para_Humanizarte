@@ -44,7 +44,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
 }
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+        $pdo = new PDO("mysql:host=$localhost;dbname=$banco", $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Verifique se o usuário tem permissão para excluir a aula (você pode adicionar essa lógica se necessário)

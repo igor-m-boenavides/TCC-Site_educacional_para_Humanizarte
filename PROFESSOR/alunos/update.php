@@ -105,6 +105,16 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
             <label for="nova_senha">Senha</label>
             <input type="password" class="form-control" name="nova_senha" id="nova_senha" placeholder="&#xf023; Digite a nova senha do usuário" style="font-family:Arial, FontAwesome">
         </div>
+
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" name="status" id="status">
+                <option value="ativado">Ativado</option>
+                <option value="desativado">Desativado</option>
+            </select>
+        </div>
+
+
         <div class="form-check">
         <div class="btn-cadastro">
             <input type="submit" value="ALTERAR" class="btn btn-dark" id="btn-cadastro"></input>

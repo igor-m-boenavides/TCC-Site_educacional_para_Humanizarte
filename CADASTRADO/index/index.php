@@ -78,15 +78,15 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
 <!-- BARRA DE NAVEGAÇÃO -->
 
 <div class="navbar">
-  <a class="navbar-logo" style="color: black; text-decoration: none; font-size: 15pt;">
+  <a class="navbar-logo" href="index.php" style="color: black; text-decoration: none; font-size: 15pt;">
     <img src="imagens/logo.png" width="50px" height="50px">
     Humanizarte
   </a>
   <nav class="lista-menu">
     <ul class="menu-items">
-      <li id="atual"><a href="../index/index.php">Ínicio</a></li>
+      <li id="atual"><a href="../index/index.php">Início</a></li>
       <li><a href="../suas turmas/turmas.php">Suas turmas</a></li>
-      <li><a href="../sobre-nos/sobrenos.html">Sobre nós</a></li>
+      <li><a href="../sobre-nos/sobrenos.php">Sobre nós</a></li>
       <li><a href="../conta/conta.php">Conta</a></li>
     </ul>
   </nav>
@@ -192,7 +192,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
     <img src="imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
+    <!-- <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p> -->
   </div>
 </footer>
 

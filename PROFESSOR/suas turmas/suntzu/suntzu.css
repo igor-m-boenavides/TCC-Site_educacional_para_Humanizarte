@@ -63,6 +63,7 @@ font-weight: 600;
   color: #F8B134;
   font-weight: 500;
   margin-top: 0;
+  padding-bottom: 1%;
 }
   
 .roda-pe .contato {
@@ -121,6 +122,10 @@ details > summary {
   cursor: pointer;
 }
 
+details {
+  margin-bottom: 1%;
+}
+
 details > p {
   background-color: #F8B134;
   padding: 1%;
@@ -131,6 +136,5 @@ details > p {
 .aula {
   margin: 1%;
 }
-
 
 /* FIM AULAS */

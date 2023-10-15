@@ -27,7 +27,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
 
-  <a class="navbar-brand" href="#" id="logo_texto"><img alt="Logo Humanizarte" src="../imagens/logo.png" width="40" height="40">Humanizarte</a>
+  <a class="navbar-brand" href="cronos.php" id="logo_texto"><img alt="Logo Humanizarte" src="../imagens/logo.png" width="40" height="40">Humanizarte</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="../../index/index.php">Ínicio</span></a>
+        <a class="nav-link" href="../../index/index.php">Início</span></a>
       </li>
       <li class="nav-item"  style="text-decoration: underline;">
         <a class="nav-link" href="../../suas turmas/turmas.php">Suas turmas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../../sobre-nos/sobrenos.html">Sobre nós</a>
+        <a class="nav-link" href="../../sobre-nos/sobrenos.php">Sobre nós</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../../conta/conta.php">Conta</a>
@@ -149,7 +149,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
     <img src="../imagens/logo.png" alt="Logo da humanizarte" id="logo-roda-pe">
     <h1>Humanizarte</h1>
     <p id="copyright">Copyright <i class="bi bi-c-circle"></i> 2023 Humanizarte, LTDA</p>
-    <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p>
+    <!-- <p style="font-weight: 600; padding-bottom: 1%;"><a href="#" style="color:black; text-decoration: underline;">Política de Privacidade</a> | <a href="#"  style="color:black; text-decoration: underline">Política de Segurança</a></p> -->
   </div>
 </footer>
 

@@ -18,7 +18,7 @@ if (isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['senha']) &&
 
         // Verifica se o usuário pertence à turma "professor" (id_turma: 4)
         if ($u->isProfessor($nome)) {
-            header("Location: ../../PROFESSOR/index/index.html");
+            header("Location: ../../PROFESSOR/index/index.php");
         } else {
             header("Location: ../../CADASTRADO/index/index.php");
         }
