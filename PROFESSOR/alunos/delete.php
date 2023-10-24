@@ -42,7 +42,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
 
 // Conectando ao banco de dados usando PDO
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $conn = new PDO("mysql:host=$localhost;dbname=$banco", $user, $pass);
   // Definindo o modo de erro do PDO como exceção
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   

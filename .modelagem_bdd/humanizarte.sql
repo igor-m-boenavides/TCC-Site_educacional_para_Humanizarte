@@ -13,6 +13,15 @@ CREATE TABLE IF NOT EXISTS aluno (
     PRIMARY KEY (id_aluno)
 )  ENGINE=INNODB;
 
+INSERT INTO aluno (nome, email, telefone, senha, status)
+VALUES ('admin', 'admin@gmail.com', '123456789', 'admin', 'ativado');
+
+INSERT INTO aluno (nome, email, telefone, senha, status)
+VALUES ('user', 'user@gmail.com', '987654321', 'user', 'ativado');
+
+INSERT INTO aluno (nome, email, telefone, senha, status)
+VALUES ('teste', 'teste@gmail.com', '192837465', 'teste', 'ativado');
+
 DROP TABLE IF EXISTS turma;
 CREATE TABLE IF NOT EXISTS turma (
     id_turma INT NOT NULL AUTO_INCREMENT,
@@ -20,7 +29,8 @@ CREATE TABLE IF NOT EXISTS turma (
     PRIMARY KEY (id_turma)
 )  ENGINE=INNODB;
 
-INSERT INTO turma (id_turma, nome) VALUES (1, 'Logos'), (2, 'Cronos'), (3, 'Sun Tzu'), (4, 'Professor');
+INSERT INTO turma (id_turma, nome)
+VALUES (1, 'Logos'), (2, 'Cronos'), (3, 'Sun Tzu'), (4, 'Professor');
 
 DROP TABLE IF EXISTS aluno_turma;
 CREATE TABLE IF NOT EXISTS aluno_turma (
@@ -35,6 +45,9 @@ CREATE TABLE IF NOT EXISTS aluno_turma (
         REFERENCES turma (id_turma)
         ON DELETE CASCADE ON UPDATE CASCADE
 )  ENGINE=INNODB;
+
+INSERT INTO aluno_turma (id_aluno, id_turma)
+VALUES (1, 4), (2, 1), (2, 2), (2, 3), (3, 1);
 
 DROP TABLE IF EXISTS aula;
 CREATE TABLE IF NOT EXISTS aula (

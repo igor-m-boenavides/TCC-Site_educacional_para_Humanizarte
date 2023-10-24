@@ -41,7 +41,7 @@ if (isset($_SESSION['nome']) && !empty($_SESSION['nome']) && isset($_SESSION['se
 }
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo = new PDO("mysql:host=$localhost;dbname=$banco;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Erro ao conectar com o banco de dados: " . $e->getMessage());
@@ -75,12 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->bindParam(':id_aluno', $alunoId);
                 $stmt->bindParam(':id_turma', $turma);
                 $stmt->execute();
-            }
-
-            // Verifica se o usuário pertence à turma "professor" (id_turma: 4)
-            if (in_array(4, $turmas)) {
-                header("Location: ../index/index.html");
-                exit();
             }
         }
 

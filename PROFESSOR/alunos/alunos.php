@@ -157,9 +157,9 @@ try {
 
 ?>
 
-<div class="mudar">
+<!-- <div class="mudar">
   <p><a href="alunos.php?status=ativado" style="color: black;">Mostrar Alunos Ativados</a> | <a href="alunos.php?status=desativado" style="color: black;">Mostrar Alunos Desativados</a></p>
-</div>
+</div> -->
 
 <table class="table">
 <tbody>
